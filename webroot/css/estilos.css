@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Gill Sans,Gill Sans MT,Calibri,sans-serif; 
+
+}
+/*HEADER -> TITULO E ICONO DE VOLVER ATRÁS*/
+header{
+    padding: 2%;
+    text-align: center;
+    background: #A9C6FF;
+}
+h1{
+    font-size: 4vh;
+    color:white;
+    border-bottom: 1vh solid black;
+}
+header img{
+    float:left;
+
+}
+/*Icono de flecha y GIT*/
+.imgprinc{
+    width:2.5%;
+    height:2.5%;
+    transition: 0.5s;
+
+}
+#casa{
+    float:right;
+}
+.imgprinc:hover{
+    filter: drop-shadow(0 2px 5px white);
+
+}
+
+/*BODY*/
+body{
+    background: #A9C6FF;
+}
+/*BUSCADOR -> FORMULARIO*/
+fieldset{
+    border:0;
+
+}
+.botones{
+    text-align: center;
+}
+
+.botones button{
+    width: 20%;
+    border: none;
+    background-color: #e7e7e7; 
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.botones button:hover{
+    color:white;
+    background-color: black;
+    transition-duration: 500ms;
+}
+.enter{
+    font-size: 2vh;
+    width: 50%;
+    border-radius:10px;
+    margin: 8% auto;
+    background-color:#ccc;
+}
+.enter[name="edit"]{
+    margin: 4% auto;
+
+}
+.enter button{
+    margin-top: 1vh;
+}
+.respuesta{
+    text-align: center;
+    margin: 2vh;
+    font-size: 3vh;
+}
+.respuesta button{
+    margin: 4vh;
+}
+form label{ 
+    margin-left: 10%;
+    width: 20%;
+    padding: 2%;
+    font-weight:bold;
+    display:inline-block;
+}
+form input{
+    font-size: 2vh;
+    text-align: center;
+    padding:1% 5%;
+    margin:2% 0;
+    display:inline-block;
+}
+
+input:read-only{
+    background-color: #EEEDD3;
+}
+form input[type="text"], form input[type="password"] {
+    width:50%;
+    background-color: white;
+    border-radius:3px;
+
+}
+form input[name="Perfil"], form input[name="CodUsuario"], form input[name="DescUsuario"]{
+    background-color: #EEEDD3;
+}
+#login input{
+     background-color: white;
+}
+input:focus {
+    border-color: #00BA68;
+    background-color: #FAFBFC;
+    outline: 5px;
+    color:#008508;
+}
+input:placeholder-shown {
+    background-color: #FAFBFC;
+}
+
+form button{
+    width: 100%;
+    background-color: black;
+    border:none;
+    border-radius:5px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+form button[name="editProfile"]:hover{
+    background-color: #2C6DA4;
+}
+form button[name="deleteAccount"]:hover{
+    background-color: #B3283F;
+}
+form button:hover{
+    cursor:pointer;
+    color:black;
+    background: white;
+    transition-duration: 500ms;
+}
+form button[name="Aceptar"]:hover{
+    background: #2CA442;
+}
+form button[name="Cancelar"]:hover{
+    background: #A43533;
+}
+form input[name="cambiarPassword"]:hover{
+    text-decoration: none;
+    cursor:pointer;
+    color:white;
+    background: grey;
+}
+form input[name="cancelar"]:hover{
+    text-decoration: none; 
+    cursor:pointer;
+    color:black;
+    background: red;
+}
+form input[name="eliminar"]:hover{
+    text-decoration: none;
+    background-color:red;
+}
+.errores{
+    font-size: 2.5vh;
+    text-align: center;
+    color:red;
+    margin:1% auto;
+}
+.required{
+    background-color: #ADB9C5;
+}
+
+/*-----------FOOTER-----------*/
+footer{
+    font-size: 3vh;
+    background: #A9C6FF;
+    color: black;
+    position: fixed;
+    height: 10%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer ul li{
+    display:inline;
+    list-style: none;
+    padding-left:3px;
+    padding-right:3px;
+}
+
+footer ul li #imggit{
+    width:3%;
+    height:3%;
+    transition: 0.5s;
+}
+footer ul li #doc{
+    width:3%;
+    height:3%;
+    transition: 0.5s;
+}
+
+footer ul li #imggit:hover{
+    filter: drop-shadow(0 2px 5px white);
+}
