@@ -13,17 +13,19 @@
         <?php require_once $vistaEnCurso ?>
 
         <footer>
+            <h3 id="titulofooter">&copy2021 Rodrigo Robles Miñambres</h3>
             <ul>
-                <li>&copy2020-2021 | Rodrigo Robles Miñambres</li>
                 <li>
-                    <a target="_blank" href="https://github.com/Rodrigmen/Tema6LoginLogoff">
-                        <img id="imggit" title="GitHub" src="webroot/css/img/github.png"  alt="GITHUB">
-                    </a>
+                    <a target="_blank" href="https://github.com/"><?php echo $aLang[$_COOKIE['idioma']]['imitation']; ?>  <img src="webroot/css/img/lupa.png" alt=""/></a>
                 </li>
                 <li>
-                    <a target="_blank" href="doc/index.html">
-                        <img id="doc" title="Documentación" src="webroot/css/img/documentos.png"  alt="Documentación">
-                    </a>
+                    <a target="_blank" href="../../index.html"><?php echo $aLang[$_COOKIE['idioma']]['stwebsite']; ?> <img src="webroot/css/img/autor.png" alt=""/></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/Rodrigmen/AplicacionFinal2021">GitHub <img src="webroot/css/img/git.png" alt=""/></a>
+                </li>
+                <li>
+                    <a target="_blank" href="doc/index.html"><?php echo $aLang[$_COOKIE['idioma']]['documentation']; ?> <img src="webroot/css/img/doc.png" alt=""/></a>
                 </li>
             </ul>            
         </footer>
