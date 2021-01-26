@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>LoginLogoffMulticapaPOO</title>
+        <title>AplicacionFinal2021</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet"  href="webroot/css/estilos.css"       type="text/css" >
