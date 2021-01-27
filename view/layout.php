@@ -23,6 +23,9 @@
             <h3 id="titulofooter">&copy2021 Rodrigo Robles Miñambres</h3>
             <ul>
                 <li>
+                    <a target="_blank" href="doc/HerramientasYTecnologias.pdf"><?php echo $aLang[$_COOKIE['idioma']]['tools']; ?>  <img src="webroot/css/img/tools.png" alt=""/></a>
+                </li>
+                <li>
                     <a target="_blank" href="https://github.com/"><?php echo $aLang[$_COOKIE['idioma']]['imitation']; ?>  <img src="webroot/css/img/lupa.png" alt=""/></a>
                 </li>
                 <li>
@@ -36,6 +39,9 @@
                 </li>
                 <li>
                     <a target="_blank" href="doc/index.html"><?php echo $aLang[$_COOKIE['idioma']]['documentation']; ?> <img src="webroot/css/img/doc.png" alt=""/></a>
+                </li>
+                <li>
+                    <a target="_blank" href="#">RSS <img src="webroot/css/img/rss.png" alt=""/></a>
                 </li>
             </ul>            
         </footer>

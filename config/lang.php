@@ -36,7 +36,9 @@ $aLang = [
         'tree' => 'Árbol de navegación',
         'map' => 'Mapa web',
         'storage' => 'Estructura de almacenamiento',
-        'fisical' => 'Modelo físico de datos'
+        'fisical' => 'Modelo físico de datos',
+        'return' => 'Volver',
+        'tools' => 'Herramientas y tecnologías utilizadas'
     ],
     'en' => [
         'user' => 'User',
@@ -70,7 +72,9 @@ $aLang = [
         'tree' => 'Navigation tree',
         'map' => 'Web map',
         'storage' => 'Storage structure',
-        'fisical' => 'Physical data model'
+        'fisical' => 'Physical data model',
+        'return' => 'Return',
+        'tools' => 'Tools and technologies used'
     ]
 ];
 ?>

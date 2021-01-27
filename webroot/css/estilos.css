@@ -135,6 +135,9 @@ fieldset{
     background-color:#ccc;
     margin-bottom: 10%;
 }
+#rest{
+    width: 70%;
+}
 .otros button{
     margin-top: 1vh;
 }
@@ -228,8 +231,11 @@ form button:hover{
 form button[name="Aceptar"]:hover{
     background: #2CA442;
 }
-form button[name="Cancelar"]:hover{
+form button[name="Cancelar"]{
     background: #A43533;
+}
+form button[name="rest"]:hover{
+    background: #DE7645;
 }
 form input[name="cambiarPassword"]:hover{
     text-decoration: none;
@@ -237,15 +243,20 @@ form input[name="cambiarPassword"]:hover{
     color:white;
     background: grey;
 }
-form input[name="cancelar"]:hover{
-    text-decoration: none; 
-    cursor:pointer;
-    color:black;
-    background: red;
+#respuestarest{
+    text-align: justify;
 }
-form input[name="eliminar"]:hover{
-    text-decoration: none;
-    background-color:red;
+
+#titulorest{
+    text-align: center;
+    margin: 2%;
+    color:white;
+    font-weight: bold;
+    font-size: 4vh;
+
+}
+#fechaR{
+    margin-left: 25%;
 }
 .errores{
     font-size: 2.5vh;
@@ -268,7 +279,7 @@ footer{
     font-size: 3vh;
     background: #A9C6FF;
     position: fixed;
-    height: 10%;
+    height: 12%;
     left: 0;
     bottom: 0;
     width: 100%;
