@@ -1,10 +1,3 @@
-<header>
-    <a href="../indexProyectoDWES.php">
-        <img class="imgprinc" src="webroot/css/img/flechaatras.png" alt="Atrás" title="Atrás"/>
-    </a>
-    <img id="logo" src="webroot/css/img/logo.jpg" alt=""/> 
-    <h1 id="titulo"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></h1>
-</header>
 <main>
     <form id="login" class="enter" name="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 

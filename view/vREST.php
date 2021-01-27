@@ -1,6 +1,3 @@
-<header>
-    <h1>REST</h1>
-</header>
 <main>
     <form class="enter" name="edit" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 

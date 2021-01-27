@@ -1,7 +1,3 @@
-<header>
-    <img id="logo" src="webroot/css/img/logo.jpg" alt=""/> 
-    <h1 id="titulo"><?php echo $aLang[$_COOKIE['idioma']]['deleteAccount']; ?></h1>
-</header>
 <main>
     <form class="otros" name="edit" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 

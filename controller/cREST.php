@@ -1,5 +1,6 @@
 <?php
 
+$titulo = "REST";
 if (isset($_REQUEST['Cancelar'])) {
 
     $_SESSION['paginaEnCurso'] = $controladores['inicio']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del login

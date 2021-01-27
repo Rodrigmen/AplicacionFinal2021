@@ -1,10 +1,6 @@
-<header>
-    <img id="logo" src="webroot/css/img/logo.jpg" alt=""/> 
-    <h1 id="titulo"><?php echo $aLang[$_COOKIE['idioma']]['registration']; ?></h1>
-</header>
 <main>
 
-    <form name="singup" class="otros"  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form name="singup" id="registro" class="otros"  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <div class="required">
             <label for="CodUsuario"><?php echo $aLang[$_COOKIE['idioma']]['user']; ?></label>
