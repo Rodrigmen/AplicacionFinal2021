@@ -1,4 +1,5 @@
 <header>
+    <img id="logo" src="webroot/css/img/logo.jpg" alt=""/> 
     <h1 id="titulo"><?php echo $aLang[$_COOKIE['idioma']]['start']; ?></h1>
 </header>
 <main class="respuesta">

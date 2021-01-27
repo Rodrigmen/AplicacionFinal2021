@@ -2,7 +2,7 @@
     <a href="../indexProyectoDWES.php">
         <img class="imgprinc" src="webroot/css/img/flechaatras.png" alt="Atrás" title="Atrás"/>
     </a>
-    <img id="logo" src="webroot/css/img/logo.jpg" alt=""/>
+    <img id="logo" src="webroot/css/img/logo.jpg" alt=""/> 
     <h1 id="titulo"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></h1>
 </header>
 <main>
@@ -43,7 +43,7 @@
                 <img src="webroot/css/img/fisical.PNG" alt=""/></li></a>
     </ul>
     <form class="botones" name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <button <?php echo ($_COOKIE['idioma'] == "es") ? "style='color: orangered;'" : null; ?> class="idioma " type="submit" name="idiomaElegido" value="es">Castellano</button>
+        <button <?php echo ($_COOKIE['idioma'] == "es") ? "style='color: orangered;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="es">Castellano</button>
         <button <?php echo ($_COOKIE['idioma'] == "en") ? "style='color: orangered;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="en">English</button>
     </form>
 </main>

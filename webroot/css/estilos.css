@@ -123,9 +123,20 @@ fieldset{
     width: 30%;
     border-radius:10px;
     margin: 8%;
-    margin-left: 15%;
+    margin-left: 13%;
     background-color:#ccc;
     margin-bottom: 10%;
+}
+.otros{
+    font-size: 2vh;
+    width: 50%;
+    border-radius:10px;
+    margin: 4% auto;
+    background-color:#ccc;
+    margin-bottom: 10%;
+}
+.otros button{
+   margin-top: 1vh;
 }
 .enter[name="edit"]{
     margin: 4% auto;
@@ -160,25 +171,29 @@ form input{
 input:read-only{
     background-color: #EEEDD3;
 }
-form input[type="text"], form input[type="password"] {
+input:read-only:focus:hover{
+    border-color: orangered;
+    color:orangered;
+}
+input:read-write:focus:hover{
+    border-color: #00BA68;
+    color:#008508;
+}
+form input{
     width:50%;
     background-color: white;
     border-radius:3px;
-
 }
-form input[name="Perfil"], form input[name="CodUsuario"], form input[name="DescUsuario"]{
-    background-color: #EEEDD3;
-}
-#login input{
+input:not(:placeholder-shown){
     background-color: white;
 }
 input:focus {
-    border-color: #00BA68;
+    transition:500ms;
     background-color: #FAFBFC;
     outline: 5px;
-    color:#008508;
 }
 input:placeholder-shown {
+    transition:500ms;
     background-color: #FAFBFC;
 }
 
