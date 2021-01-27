@@ -20,9 +20,8 @@ class REST {
         //llamamos al servicio, pasándole la fecha al campo date, y decodificamos el json que nos devuelve
     }
     
-    public static function servicio19($fecha, $pais) {
-        //https://www.balldontlie.io/api/v1/teams/$number
-        return json_decode(file_get_contents("https://covid-19-data.p.rapidapi.com/report/country/name?date=$fecha&name=$pais"), true);
+    public static function sacarEquipo($number) {
+        return json_decode(file_get_contents("https://www.balldontlie.io/api/v1/teams/$number"), true);
         //llamamos al servicio, pasándole la fecha al campo date, y decodificamos el json que nos devuelve
     }
 

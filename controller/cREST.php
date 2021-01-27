@@ -13,7 +13,7 @@ if (isset($_REQUEST['Volver'])) { // si se ha pulsado el botón de editar perfil
 }
 if (isset($_REQUEST['Aceptar1'])) { //si se ha enviado una fecha
     //llamamos al servicio y le pasamos la fecha introducida por el usuario
-    $aServicioAPOD = REST::sevicioAPOD($_REQUEST['fecha1']);
+    $aServicioAPOD = REST::sevicioAPOD($_REQUEST['fecha']);
 } else {
     //llamamos al servicio y le pasamos la fecha de hoy
     $aServicioAPOD = REST::sevicioAPOD(date('Y-m-d'));
@@ -29,21 +29,21 @@ if (is_null($aServicioAPOD)) {
 }
 if (isset($_REQUEST['Aceptar2'])) { //si se ha enviado una fecha
     //llamamos al servicio y le pasamos la fecha introducida por el usuario
-    $aServicio19=REST::servicio19($_REQUEST['fecha2'], $_REQUEST['pais']);
-} else {
-    //llamamos al servicio y le pasamos la fecha de hoy
-    $aServicio19 = REST::servicio19(date('Y-m-d'), "Italy");
+    $ValoresEquipo = REST::sacarEquipo($_REQUEST['numero']);
 }
-var_dump($aServicio19);
-if (is_null($aServicio19)) {
-    $pais19 = "¡Petición incorrecta o demasiadas peticiones!";
-    $descripcionEnCurso = null;
+if (is_null($ValoresEquipo)) {
+    $nombreEquipo = "¡No se ha pedido nada!";
+    $abreviatura = null;
+    $ciudad = null;
+    $conferencia = null;
+    $division = null;
 } else {
-    $pais19 = $aServicio19['pais19'];
-    $descripcionEnCurso = $aServicio19['explanation'];
+    $nombreEquipo = $ValoresEquipo['full_name'];
+    $abreviatura = $ValoresEquipo['abbreviation'];
+    $ciudad = $ValoresEquipo['city'];
+    $conferencia = $ValoresEquipo['conference'];
+    $division = $ValoresEquipo['division'];
 }
-
-
 $vistaEnCurso = $vistas['rest']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
 
 require_once $vistas['layout'];
