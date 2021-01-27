@@ -29,6 +29,9 @@
                     <a target="_blank" href="../../index.html"><?php echo $aLang[$_COOKIE['idioma']]['stwebsite']; ?> <img src="webroot/css/img/autor.png" alt=""/></a>
                 </li>
                 <li>
+                    <a target="_blank" href="https://daw218.ieslossauces.es/">1&1 </a>
+                </li>
+                <li>
                     <a target="_blank" href="https://github.com/Rodrigmen/AplicacionFinal2021">GitHub <img src="webroot/css/img/git.png" alt=""/></a>
                 </li>
                 <li>
