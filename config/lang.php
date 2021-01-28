@@ -38,9 +38,8 @@ $aLang = [
         'storage' => 'Estructura de almacenamiento',
         'fisical' => 'Modelo físico de datos',
         'return' => 'Volver',
-        'tools' => 'Herramientas y tecnologías utilizadas',
-        'restS'=>'Foto de Astronomía del Día - Rest de Susana',
-        'restR'=>'Equipo de la NBA - Rest propio'
+        'tools' => 'Herramientas y tecnologías utilizadas'
+    
     ],
     'en' => [
         'user' => 'User',
@@ -76,9 +75,7 @@ $aLang = [
         'storage' => 'Storage structure',
         'fisical' => 'Physical data model',
         'return' => 'Return',
-        'tools' => 'Tools and technologies used',
-        'restS'=>'Astronomy Picture of the Day - Susana\'s Rest',
-        'restR'=>'Equipo de la NBA - Own Rest'
+        'tools' => 'Tools and technologies used'
     ]
 ];
 ?>

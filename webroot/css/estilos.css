@@ -135,8 +135,19 @@ fieldset{
     background-color:#ccc;
     margin-bottom: 10%;
 }
-#rest{
-    width: 70%;
+.rest{
+    margin: 10%;
+    margin-right: 1%;
+    margin-top: 1%;
+    float:left;
+    font-size: 2vh;
+    width: 35%;
+    border-radius:10px;
+    background-color:#ccc;
+    margin-bottom: 10%;
+}
+.rest button{
+    margin-top: 1vh;
 }
 .otros button{
     margin-top: 1vh;
@@ -272,7 +283,31 @@ form input[name="cambiarPassword"]:hover{
     border-top-right-radius: 5px;
 }
 
+.opciones{
+    width: 20%;
+    height: 20%;
+}
+.opciones button{
+    width: 0%;
+    border: none;
+    padding: 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0vh;
+    cursor: pointer;
+    
+}
 
+.opciones img{
+    border-radius: 5px;
+    opacity: 0.8;
+    filter: grayscale(100%);
+}
+.opciones img:hover{
+    filter: none;
+    opacity: 1;
+    transition: 500ms;
+}
 /*-----------FOOTER-----------*/
 
 footer{

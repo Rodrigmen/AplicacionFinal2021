@@ -19,8 +19,9 @@ class REST {
         return json_decode(file_get_contents("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=$fecha"), true);
         //llamamos al servicio, pasándole la fecha al campo date, y decodificamos el json que nos devuelve
     }
-    
+
     public static function sacarEquipo($number) {
+        error_reporting(0);
         return json_decode(file_get_contents("https://www.balldontlie.io/api/v1/teams/$number"), true);
         //llamamos al servicio, pasándole la fecha al campo date, y decodificamos el json que nos devuelve
     }

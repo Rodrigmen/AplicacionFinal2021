@@ -31,7 +31,7 @@ if (isset($_REQUEST['Aceptar2'])) { //si se ha enviado una fecha
     //llamamos al servicio y le pasamos la fecha introducida por el usuario
     $ValoresEquipo = REST::sacarEquipo($_REQUEST['numero']);
 }
-if (is_null($ValoresEquipo)) {
+if (is_null($ValoresEquipo) || $ValoresEquipo['meta']['total_count']=30) {
     $nombreEquipo = "¡No se ha pedido nada!";
     $abreviatura = null;
     $ciudad = null;
@@ -39,7 +39,7 @@ if (is_null($ValoresEquipo)) {
     $division = null;
 } else {
     $nombreEquipo = $ValoresEquipo['full_name'];
-    $abreviatura = $ValoresEquipo['abbreviation'];
+    $abreviatura = "(" . $ValoresEquipo['abbreviation'] . ")";
     $ciudad = $ValoresEquipo['city'];
     $conferencia = $ValoresEquipo['conference'];
     $division = $ValoresEquipo['division'];

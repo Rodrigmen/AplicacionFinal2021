@@ -8,7 +8,10 @@
         <button class="logout" type="submit" name='cerrarSesion'><?php echo $aLang[$_COOKIE['idioma']]['logoff']; ?></button>
         <button class="logout" type="submit" name='editProfile'><?php echo $aLang[$_COOKIE['idioma']]['editProfile']; ?></button>
         <button class="logout" type="submit" name='deleteAccount'><?php echo $aLang[$_COOKIE['idioma']]['deleteAccount']; ?></button>
-        <button class="logout" type="submit" name='rest'>RESTs</button>
+        <div class="opciones">
+            <button type="submit" name='rest'><img src="webroot/css/img/rest.png" alt=""/></button>
+        </div>
     </form>
+
 </main>
 </body>
