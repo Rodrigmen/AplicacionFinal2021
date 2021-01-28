@@ -38,10 +38,10 @@
                     <a target="_blank" href="https://github.com/Rodrigmen/AplicacionFinal2021">GitHub <img src="webroot/css/img/git.png" alt=""/></a>
                 </li>
                 <li>
-                    <a target="_blank" href="doc/index.html"><?php echo $aLang[$_COOKIE['idioma']]['documentation']; ?> <img src="webroot/css/img/doc.png" alt=""/></a>
+                    <a target="_blank" href="doc/phpDoc/index.html"><?php echo $aLang[$_COOKIE['idioma']]['documentation']; ?> <img src="webroot/css/img/doc.png" alt=""/></a>
                 </li>
                 <li>
-                    <a target="_blank" href="#">RSS <img src="webroot/css/img/rss.png" alt=""/></a>
+                    <a target="_blank" href="doc/rss.xml">RSS <img src="webroot/css/img/rss.png" alt=""/></a>
                 </li>
             </ul>            
         </footer>

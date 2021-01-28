@@ -13,10 +13,8 @@
 class UsuarioPDO {
 
     /**
-     * Método validarUsuario()
-     * 
      * Valida si existe un determinado usuario y password en la base de datos.
-     * 
+     *      
      * Si existe el usuario actualiza la ultima conexion y el numero de conexiones de ese usuario y lo devuelve.
      * Si no existe el usuario devuelve null.
      * 

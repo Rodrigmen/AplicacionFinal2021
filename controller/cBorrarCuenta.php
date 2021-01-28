@@ -10,22 +10,22 @@ $ConexNumber = $usuarioActual->getNumConexiones();
 $LastDateConex = date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion());
 if (isset($_REQUEST['Cancelar'])) {
 
-    $_SESSION['paginaEnCurso'] = $controladores['inicio']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del login
+    $_SESSION['paginaEnCurso'] = $controladores['inicio'];
     header('Location: index.php');
     exit;
 }
 
 
-if (isset($_REQUEST["Aceptar"])) { // comprueba que el usuario le ha dado a al boton de IniciarSesion y valida la entrada de todos los campos
+if (isset($_REQUEST["Aceptar"])) {
     UsuarioPDO::borrarUsuario($CodUser);
     session_destroy();
-    $_SESSION['paginaEnCurso'] = $controladores['login']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del inicio
+    $_SESSION['paginaEnCurso'] = $controladores['login'];
 
-    header('Location: index.php'); // redirige al index.php
+    header('Location: index.php');
     exit;
 }
 
 
-$vistaEnCurso = $vistas['deleteAccount']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
+$vistaEnCurso = $vistas['deleteAccount'];
 
 require_once $vistas['layout'];

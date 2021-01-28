@@ -1,0 +1,16 @@
+<rss version="2.0">
+    <channel>
+        <title>Aplicación Final 2020-2021</title>
+        <link>https://daw218.ieslossauces.es/proyectoDWES/AplicacionLoginLogoffMulticapaPOO/index.php</link>
+        <description>Aplicación final del curso de Rodrigo Robles de 2º DAW</description>
+        <category> Aplicación </category>
+        <language> es </language>
+        <copyright> © </copyright>
+        <item>
+            <title>Nueva funcionalidad: Api - REST</title>
+            <pubDate>Thu, 28 Jan 2021 12:34:00 EST</pubDate>
+            <author>rodrigo.robmin@educa.jcyl.es </author>
+            <guid> </guid>
+        </item>
+    </channel>
+</rss>

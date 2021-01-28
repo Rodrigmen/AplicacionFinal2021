@@ -1,27 +1,48 @@
 <?php
 
 /**
- * @author Susana Fabián Antón
- * @since 26/01/2021
- * @version 26/01/2021
+ * Class REST
+ *
+ * Clase cuyo métodos métodos permiten obtener información de APIs
+ * 
+ * @author Rodrigo Robles Miñambres
+ * @copyright 28-01-2021
+ * @version 1.0
  */
 class REST {
 
     /**
-     * Llama al servicio API REST APOD(Astronomy Picture of the Day), que nos devuelve la imagen atronómica del
-     * día e información relativa a esta.
+     * Obtiene información de la API de la Nasa
      * 
-     * @param type $fecha la fecha que le vamos a pasar al servicio para que busque una imagen.
-     * @return type array que contiene información sobre la imagen astronómica del día. 
+     * Esta función se encarga de obtener y descodificar un .json con los datos recibidos 
+     * tras una consulta a la API con un parámetro insertado. En este caso introduces una fecha y
+     * obtienes una imagen con su respectivo título descripción
+     * 
+     * 
+     * @link https://api.nasa.gov/ API usada
+     * @access public
+     * @param $fecha Fecha formato (Y-m-d) 
+     * @return array Array con los valores del .json
      */
     public static function sevicioAPOD($fecha) {
         return json_decode(file_get_contents("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=$fecha"), true);
-        //llamamos al servicio, pasándole la fecha al campo date, y decodificamos el json que nos devuelve
     }
 
+    /**
+     * Obtiene información de una API de la NBA
+     * 
+     * Esta función se encarga de obtener y descodificar un .json con los datos recibidos 
+     * tras una consulta a la API con un parámetro insertado. En este caso introduces un número
+     * y obtienes las características de un equipo
+     * 
+     * 
+     * @link https://www.balldontlie.io/ API usada
+     * @access public
+     * @param $number Número entero del 1 al 30
+     * @return array Array con los valores del .json
+     */
     public static function sacarEquipo($number) {
         return json_decode(file_get_contents("https://www.balldontlie.io/api/v1/teams/$number"), true);
-        //llamamos al servicio, pasándole la fecha al campo date, y decodificamos el json que nos devuelve
     }
 
 }

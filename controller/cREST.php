@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @author Susana Fabián Antón
- * @since 26/01/2021
- * @version 26/01/2021
- */
 $titulo = "REST";
 if (isset($_REQUEST['Volver'])) { // si se ha pulsado el botón de editar perfil
     $_SESSION['paginaEnCurso'] = $controladores['inicio']; //guardamos en la sesión el controlador que debe ejecutarse

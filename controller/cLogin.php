@@ -1,10 +1,5 @@
 <?php
 
-/**
- *   @author: Javier Nieto Lorenzo
- *   @since: 02/12/2020
- *   cInicio
- */
 $titulo = $aLang[$_COOKIE['idioma']]['login'];
 if (!isset($_COOKIE['idioma'])) {
     setcookie('idioma', 'es', time() + 2592000, "/proyectoDWES/AplicacionFinal2021/"); // crea la cookie 'idioma' con el valor 'es' para 30 dias

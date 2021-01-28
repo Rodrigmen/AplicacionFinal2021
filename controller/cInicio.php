@@ -1,10 +1,5 @@
 <?php
 
-/**
- *   @author: Javier Nieto Lorenzo
- *   @since: 02/12/2020
- *   Programa
- */
 $titulo = $aLang[$_COOKIE['idioma']]['start'];
 if (!isset($_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'])) { // si no se ha logueado le usuario
     header('Location: index.php'); // redirige al login
@@ -16,20 +11,20 @@ if (isset($_REQUEST['cerrarSesion'])) { // si se ha pulsado el boton de Cerrar S
     header("Location: index.php"); // redirige al login
     exit;
 }
-if (isset($_REQUEST['editProfile'])) { // si se ha pulsado el boton de Cerrar Sesion
+if (isset($_REQUEST['editProfile'])) {
     $_SESSION['paginaEnCurso'] = $controladores['editProfile'];
-    header("Location: index.php"); // redirige al login
+    header("Location: index.php");
     exit;
 }
 
-if (isset($_REQUEST['deleteAccount'])) { // si se ha pulsado el boton de Cerrar Sesion
+if (isset($_REQUEST['deleteAccount'])) {
     $_SESSION['paginaEnCurso'] = $controladores['deleteAccount'];
-    header("Location: index.php"); // redirige al login
+    header("Location: index.php");
     exit;
 }
-if (isset($_REQUEST['rest'])) { // si se ha pulsado el boton de Cerrar Sesion
+if (isset($_REQUEST['rest'])) {
     $_SESSION['paginaEnCurso'] = $controladores['rest'];
-    header("Location: index.php"); // redirige al login
+    header("Location: index.php");
     exit;
 }
 $usuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
@@ -39,6 +34,6 @@ $Profile = $usuarioActual->getPerfil();
 $ConexNumber = $usuarioActual->getNumConexiones();
 $LastDateConex = date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion());
 
-$vistaEnCurso = $vistas['inicio']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
+$vistaEnCurso = $vistas['inicio'];
 require_once $vistas['layout'];
 ?>

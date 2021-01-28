@@ -1,8 +1,3 @@
-<!--
-    Autor: Susana Fabián Antón
-    Fecha creación: 26/01/2021
-    Última modificación: 26/01/2021
--->
 <main>
             <form class="rest"  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <div id="respuestarest">
