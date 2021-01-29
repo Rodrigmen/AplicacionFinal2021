@@ -1,7 +1,5 @@
 <?php
 
-$titulo = $aLang[$_COOKIE['idioma']]['editProfile'];
-
 $usuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 $CodUser = $usuarioActual->getCodUsuario();
 $DescUser = $usuarioActual->getDescUsuario();

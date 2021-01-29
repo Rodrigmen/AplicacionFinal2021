@@ -1,6 +1,4 @@
 <?php
-
-$titulo = $aLang[$_COOKIE['idioma']]['start'];
 if (!isset($_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'])) { // si no se ha logueado le usuario
     header('Location: index.php'); // redirige al login
     exit;
@@ -36,4 +34,3 @@ $LastDateConex = date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion(
 
 $vistaEnCurso = $vistas['inicio'];
 require_once $vistas['layout'];
-?>

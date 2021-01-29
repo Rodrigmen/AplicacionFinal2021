@@ -1,6 +1,5 @@
 <?php
 
-$titulo = $aLang[$_COOKIE['idioma']]['deleteAccount'];
 
 $usuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 $CodUser = $usuarioActual->getCodUsuario();

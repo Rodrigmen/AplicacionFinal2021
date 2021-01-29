@@ -1,6 +1,5 @@
 <?php
 
-$titulo = $aLang[$_COOKIE['idioma']]['login'];
 if (!isset($_COOKIE['idioma'])) {
     setcookie('idioma', 'es', time() + 2592000, "/proyectoDWES/AplicacionFinal2021/"); // crea la cookie 'idioma' con el valor 'es' para 30 dias
     header('Location: index.php');
@@ -61,5 +60,4 @@ if (isset($_REQUEST['Registrarse'])) { // si se ha pulsado el boton de registrar
     $vistaEnCurso = $vistas['login']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
 }
 
-require_once $vistas['layout'];
-?> 
+require_once $vistas['layout']; 
