@@ -1,5 +1,6 @@
 <?php
 
+$titulo = $aLang[$_COOKIE['idioma']]['registration'];
 if (isset($_REQUEST['Cancelar'])) {
 
     $_SESSION['paginaEnCurso'] = $controladores['login']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del login
