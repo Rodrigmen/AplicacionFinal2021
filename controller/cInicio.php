@@ -5,27 +5,31 @@ if (!isset($_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'])) { // si no se ha lo
     header('Location: index.php'); // redirige al login
     exit;
 }
+$aCaminos = [
+    "cerrarSesion",
+    "editProfile",
+    "deleteAccount",
+    "rest"
+];
 
-if (isset($_REQUEST['cerrarSesion'])) { // si se ha pulsado el boton de Cerrar Sesion
-    session_destroy(); // destruye todos los datos asociados a la sesion
-    header("Location: index.php"); // redirige al login
-    exit;
-}
-if (isset($_REQUEST['editProfile'])) {
-    $_SESSION['paginaEnCurso'] = $controladores['editProfile'];
-    header("Location: index.php");
-    exit;
-}
-
-if (isset($_REQUEST['deleteAccount'])) {
-    $_SESSION['paginaEnCurso'] = $controladores['deleteAccount'];
-    header("Location: index.php");
-    exit;
-}
-if (isset($_REQUEST['rest'])) {
-    $_SESSION['paginaEnCurso'] = $controladores['rest'];
-    header("Location: index.php");
-    exit;
+foreach ($aCaminos as $direccion) {
+    if ($_REQUEST[$direccion]) {
+        switch ($direccion) {
+            case 'cerrarSesion':
+                session_destroy(); // destruye todos los datos asociados a la sesion
+                break;
+            case 'editProfile':
+                $_SESSION['paginaEnCurso'] = $controladores['editProfile'];
+                break;
+            case 'deleteAccount':
+                $_SESSION['paginaEnCurso'] = $controladores['deleteAccount'];
+                break;
+            case 'rest':
+                $_SESSION['paginaEnCurso'] = $controladores['rest'];
+                break;
+        }
+        header("Location: index.php"); // redirige al login
+    }
 }
 $usuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 $CodUser = $usuarioActual->getCodUsuario();
