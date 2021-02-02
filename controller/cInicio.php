@@ -13,7 +13,7 @@ $aCaminos = [
 ];
 
 foreach ($aCaminos as $direccion) {
-    if ($_REQUEST[$direccion]) {
+    if (isset($_REQUEST[$direccion])) {
         switch ($direccion) {
             case 'cerrarSesion':
                 session_destroy(); // destruye todos los datos asociados a la sesion
@@ -35,8 +35,8 @@ $usuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 $CodUser = $usuarioActual->getCodUsuario();
 $DescUser = $usuarioActual->getDescUsuario();
 $Profile = $usuarioActual->getPerfil();
-$ConexNumber = $usuarioActual->getNumConexiones();
-$LastDateConex = date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion());
+$ConexNumber = UsuarioPDO::obtenerNumConexion($CodUser);
+$LastDateConex = date('d/m/Y H:i:s', UsuarioPDO::obtenerUltimaConexion($CodUser));
 
 $vistaEnCurso = $vistas['inicio'];
 require_once $vistas['layout'];
