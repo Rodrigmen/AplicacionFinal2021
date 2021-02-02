@@ -30,7 +30,7 @@ if (isset($_REQUEST['Aceptar2'])) { //si se ha enviado una fecha
 } else {
     $ValoresEquipo = null;
 }
-if (is_null($ValoresEquipo) || !is_null($ValoresEquipo['data'])) {
+if (is_null($ValoresEquipo) || sizeof($ValoresEquipo) < 7) {
     $nombreEquipo = "¡No se ha pedido nada!";
     $abreviatura = null;
     $ciudad = null;

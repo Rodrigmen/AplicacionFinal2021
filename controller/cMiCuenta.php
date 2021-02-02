@@ -6,8 +6,8 @@ $usuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 $CodUser = $usuarioActual->getCodUsuario();
 $DescUser = $usuarioActual->getDescUsuario();
 $Profile = $usuarioActual->getPerfil();
-$ConexNumber = $usuarioActual->getNumConexiones();
-$LastDateConex = date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion());
+$ConexNumber = UsuarioPDO::obtenerNumConexion($CodUser);
+$LastDateConex = date('d/m/Y H:i:s', UsuarioPDO::obtenerUltimaConexion($CodUser));
 if (isset($_REQUEST['Cancelar'])) {
 
     $_SESSION['paginaEnCurso'] = $controladores['inicio']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del login

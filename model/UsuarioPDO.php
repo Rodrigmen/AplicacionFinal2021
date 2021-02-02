@@ -51,6 +51,28 @@ class UsuarioPDO {
         DBPDO::ejecutaConsulta($consulta, [time(), $codUsuario]);
     }
 
+    public static function obtenerUltimaConexion($codUsuario) {
+        $fecha = null;
+        $consulta = "SELECT T01_FechaHoraUltimaConexion FROM T01_Usuario WHERE T01_CodUsuario=?";
+        $resultado = DBPDO::ejecutaConsulta($consulta, [$codUsuario]);
+        if ($resultado->rowCount() > 0) {
+            $oUsuarioConsulta = $resultado->fetchObject();
+            $fecha = $oUsuarioConsulta->T01_FechaHoraUltimaConexion;
+        }
+        return $fecha;
+    }
+
+    public static function obtenerNumConexion($codUsuario) {
+        $numero = null;
+        $consulta = "SELECT T01_NumConexiones FROM T01_Usuario WHERE T01_CodUsuario=?";
+        $resultado = DBPDO::ejecutaConsulta($consulta, [$codUsuario]);
+        if ($resultado->rowCount() > 0) {
+            $oUsuarioConsulta = $resultado->fetchObject();
+            $numero = $oUsuarioConsulta->T01_NumConexiones;
+        }
+        return $numero;
+    }
+
     /**
      * Método borrarUsuario()
      * 

@@ -20,6 +20,7 @@
     <form class="rest" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div id="respuestarest">
             <p id="titulorest"><?php echo $nombreEquipo . $abreviatura ?></p>
+            <a href="https://www.balldontlie.io/#introduction">Link a la API</a>
             <p>Ciudad: <?php echo $ciudad ?></p>
             <p>Conferencia: <?php echo $conferencia ?></p>
             <p>División: <?php echo $division ?></p>

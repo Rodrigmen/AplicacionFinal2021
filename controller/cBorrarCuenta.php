@@ -6,25 +6,28 @@ $usuarioActual = $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'];
 $CodUser = $usuarioActual->getCodUsuario();
 $DescUser = $usuarioActual->getDescUsuario();
 $Profile = $usuarioActual->getPerfil();
-$ConexNumber = $usuarioActual->getNumConexiones();
-$LastDateConex = date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion());
-if (isset($_REQUEST['Cancelar'])) {
+$ConexNumber = UsuarioPDO::obtenerNumConexion($CodUser);
+$LastDateConex = date('d/m/Y H:i:s', UsuarioPDO::obtenerUltimaConexion($CodUser));
+$aCaminos = [
+    "Aceptar",
+    "Cancelar"
+];
 
-    $_SESSION['paginaEnCurso'] = $controladores['inicio'];
-    header('Location: index.php');
-    exit;
+foreach ($aCaminos as $direccion) {
+    if (isset($_REQUEST[$direccion])) {
+        switch ($direccion) {
+            case 'Aceptar':
+                UsuarioPDO::borrarUsuario($CodUser);
+                session_destroy();
+                $_SESSION['paginaEnCurso'] = $controladores['login'];
+                break;
+            case 'Cancelar':
+                $_SESSION['paginaEnCurso'] = $controladores['inicio'];
+                break;
+        }
+        header('Location: index.php');
+    }    
 }
-
-
-if (isset($_REQUEST["Aceptar"])) {
-    UsuarioPDO::borrarUsuario($CodUser);
-    session_destroy();
-    $_SESSION['paginaEnCurso'] = $controladores['login'];
-
-    header('Location: index.php');
-    exit;
-}
-
 
 $vistaEnCurso = $vistas['deleteAccount'];
 
