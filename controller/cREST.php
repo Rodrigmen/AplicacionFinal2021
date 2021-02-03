@@ -16,7 +16,7 @@ if (isset($_REQUEST['Aceptar1'])) { //si se ha enviado una fecha
 }
 error_reporting(-1);
 if (is_null($aServicioAPOD)) {
-    $tituloEnCurso = "¡Petición incorrecta o demasiadas peticiones!";
+    $tituloEnCurso = "¡Demasiadas peticiones!";
     $imagenEnCurso = null;
     $descripcionEnCurso = null;
 } else {

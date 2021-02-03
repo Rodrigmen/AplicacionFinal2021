@@ -36,7 +36,12 @@ $CodUser = $usuarioActual->getCodUsuario();
 $DescUser = $usuarioActual->getDescUsuario();
 $Profile = $usuarioActual->getPerfil();
 $ConexNumber = UsuarioPDO::obtenerNumConexion($CodUser);
-$LastDateConex = date('d/m/Y H:i:s', UsuarioPDO::obtenerUltimaConexion($CodUser));
+if ($ConexNumber > 1) {
+    $LastDateConex = date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion());
+} else {
+    $LastDateConex = null;
+}
+
 
 $vistaEnCurso = $vistas['inicio'];
 require_once $vistas['layout'];

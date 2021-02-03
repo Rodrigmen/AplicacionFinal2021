@@ -44,50 +44,45 @@ header img{
     filter: drop-shadow(0 2px 5px white);
 
 }
-#listaopciones{
-    border-radius:10px;
-    background: black;
-    list-style: none;
-    margin-top: -32%;
-    margin-right: 10%;
+#carrusel{
+    margin-top: -30%;
+    margin-right: 5%;
+    border:2px black solid;
     float:right;
     width: 35%;
-
+    display:inline-block
 }
-#listaopciones li{
-    opacity: 0.8;
-    padding: 1%;
-    font-weight: bold;
+#carrusel h4{
     color:white;
-    text-align: center;
-    margin:4%;
-    font-size: 2vh;
-    transition: 500ms;
-}
-#listaopciones a{
-    text-decoration: none;
-}
-#listaopciones li img{
-    width: 0px;
-    height: 0px;
-}
-
-#listaopciones li:hover{
-    opacity: 1;
-    background: white;
-    color:black;
     padding: 2%;
+    text-align: center;
 }
-#listaopciones li:hover img{
-    width: 50px;
-    height: 50px;
+#carrusel button{
+    width: 20%;
+    border: none;
+    background-color: #A9C6FF;  
 }
-#listaopciones a:hover{
-    text-decoration: none;
+#carrusel button:hover{
+    cursor:pointer;
+    background-color: white;
+    transition: 200ms;     
 }
-#listaopciones li img:hover{
-    transition: 2s;
-    transform: scale(5);
+#carrusel button img{
+    width: 10%;
+}
+#imagencambiante{
+    width: 100%;
+    display:block;
+    margin:auto;
+}
+#imagencambiante:hover{
+    transition: 500ms; 
+}
+#carrusel button:first-child{
+    float:left;  
+}
+#carrusel button:last-child{
+    float:right;  
 }
 
 /*BODY*/
@@ -97,6 +92,7 @@ body{
 /*BUSCADOR -> FORMULARIO*/
 fieldset{
     border:0;
+
 
 }
 .botones{
@@ -295,7 +291,7 @@ form input[name="cambiarPassword"]:hover{
     text-decoration: none;
     font-size: 0vh;
     cursor: pointer;
-    
+
 }
 
 .opciones img{
