@@ -19,7 +19,7 @@ foreach ($aCaminos as $direccion) {
             case 'Aceptar':
                 UsuarioPDO::borrarUsuario($CodUser);
                 session_destroy();
-                $_SESSION['paginaEnCurso'] = $controladores['login'];
+                $_SESSION['paginaEnCurso'] = $controladores['principal'];
                 break;
             case 'Cancelar':
                 $_SESSION['paginaEnCurso'] = $controladores['inicio'];

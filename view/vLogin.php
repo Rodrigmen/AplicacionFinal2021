@@ -1,5 +1,5 @@
 <main>
-    <form id="login" class="enter" name="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+    <form id="login" class="otros" name="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <div class="required">
             <label for="CodUsuario"><?php echo $aLang[$_COOKIE['idioma']]['user']; ?></label>
@@ -16,20 +16,8 @@
 
         <div>
             <button class="button" type="submit" name="IniciarSesion"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></button>    
-            <button class="button" type="submit" name="Registrarse"><?php echo $aLang[$_COOKIE['idioma']]['signup']; ?></button> 
+            <button class="button" name="Registrarse"><?php echo $aLang[$_COOKIE['idioma']]['signup']; ?></button> 
+            <button class="button" name="Cancelar"><?php echo $aLang[$_COOKIE['idioma']]['cancel']; ?></button>
         </div>
-    </form>
-    <div id="carrusel">
-        <h4 id="titCarrusel">
-            <button onclick="back()"><img src="webroot/css/img/back.png" alt=""/></button>
-            <?php echo $aLang[$_COOKIE['idioma']]['catalog']; ?>
-            <button onclick="next()"><img src="webroot/css/img/next.png" alt=""/></button>
-        </h4>
-        <a id="enlace" href="" class="0" target="_blank"> <img class="0" id="imagencambiante" src="" alt=""/></a>
-
-    </div>
-    <form class="botones" name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <button <?php echo ($_COOKIE['idioma'] == "es") ? "style='color: orangered;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="es">Castellano</button>
-        <button <?php echo ($_COOKIE['idioma'] == "en") ? "style='color: orangered;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="en">English</button>
     </form>
 </main>

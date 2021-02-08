@@ -17,6 +17,7 @@ foreach ($aCaminos as $direccion) {
         switch ($direccion) {
             case 'cerrarSesion':
                 session_destroy(); // destruye todos los datos asociados a la sesion
+                $_SESSION['paginaEnCurso'] = $controladores['principal'];
                 break;
             case 'editProfile':
                 $_SESSION['paginaEnCurso'] = $controladores['editProfile'];
