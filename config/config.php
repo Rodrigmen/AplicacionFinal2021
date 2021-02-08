@@ -7,6 +7,7 @@ require_once "model/DBPDO.php";
 require_once "model/REST.php";
 
 $controladores = [
+    "principal" => "controller/cPrincipal.php",
     "login" => "controller/cLogin.php",
     "inicio" => "controller/cInicio.php",
     "registro" => "controller/cRegistro.php",
@@ -16,6 +17,7 @@ $controladores = [
 ];
 
 $vistas = [
+    "principal" => "view/vPrincipal.php",
     "layout" => "view/layout.php",
     "login" => "view/vLogin.php",
     "inicio" => "view/vInicio.php",

@@ -10,9 +10,6 @@
         <script src="webroot/js/script.js" type="text/javascript"></script>
     </head>
     <header>
-        <a href="../indexProyectoDWES.php">
-            <img class="imgprinc" src="webroot/css/img/flechaatras.png" alt="Atrás" title="Atrás"/>
-        </a>
         <img id="logo" src="webroot/css/img/logo.jpg" alt=""/> 
         <h1 id="titulo"><?php echo $titulo ?></h1>
     </header>
