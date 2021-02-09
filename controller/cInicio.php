@@ -9,7 +9,8 @@ $aCaminos = [
     "cerrarSesion",
     "editProfile",
     "deleteAccount",
-    "rest"
+    "rest",
+    "mayus"
 ];
 
 foreach ($aCaminos as $direccion) {
@@ -27,6 +28,9 @@ foreach ($aCaminos as $direccion) {
                 break;
             case 'rest':
                 $_SESSION['paginaEnCurso'] = $controladores['rest'];
+                break;
+            case 'mayus':
+                $_SESSION['paginaEnCurso'] = $controladores['mayus'];
                 break;
         }
         header("Location: index.php"); // redirige al login

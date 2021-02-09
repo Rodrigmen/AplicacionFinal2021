@@ -1,5 +1,5 @@
 <main>
-
+    <script src="webroot/js/validacionFormularios.js" type="text/javascript"></script>
     <form name="singup" id="registro" class="otros"  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <div class="required">

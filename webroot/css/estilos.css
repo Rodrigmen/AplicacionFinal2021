@@ -75,7 +75,6 @@ header img{
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
-    user-select: none;
 }
 
 /* Position the "next button" to the right */
@@ -216,11 +215,23 @@ fieldset{
     background-color:#ccc;
     margin-bottom: 10%;
 }
+.micuenta{
+    font-size: 2vh;
+    width: 50%;
+    border-radius:10px;
+    margin: 4% auto;
+    background-color:#ccc;
+    margin-bottom: 5%; 
+}
 .rest button{
     margin-top: 1vh;
 }
-.otros button{
-    margin-top: 1vh;
+.button{
+    border-radius:0;
+}
+.button:last-of-type{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .enter[name="edit"]{
     margin: 4% auto;
@@ -312,6 +323,9 @@ form button:hover{
 form button[name="Aceptar"]:hover{
     background: #2CA442;
 }
+form button[name="Aceptar2"]:hover{
+    background: #2CA442;
+}
 form button[name="Cancelar"]{
     background: #A43533;
 }
@@ -337,7 +351,7 @@ form input[name="cambiarPassword"]:hover{
 
 }
 
-#fechaR, #nba{
+#fechaR, #nba, #cadena{
     margin-left: 25%;
 }
 .errores{
@@ -355,16 +369,17 @@ form input[name="cambiarPassword"]:hover{
 }
 
 .opciones{
-    width: 20%;
+    width: 100%;
     height: 20%;
 }
 .opciones button{
+    margin-left: 5%;
+    margin-right: 25%;
     width: 0%;
     border: none;
     padding: 0px 0px;
     text-align: center;
     text-decoration: none;
-    font-size: 0vh;
     cursor: pointer;
 
 }

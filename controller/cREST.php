@@ -7,7 +7,7 @@ if (isset($_REQUEST['Volver'])) { // si se ha pulsado el botón de editar perfil
     exit;
 }
 error_reporting(0);
-if (isset($_REQUEST['Aceptar1'])) { //si se ha enviado una fecha
+if (isset($_REQUEST['Aceptar'])) { //si se ha enviado una fecha
     //llamamos al servicio y le pasamos la fecha introducida por el usuario
     $aServicioAPOD = REST::sevicioAPOD($_REQUEST['fecha']);
 } else {

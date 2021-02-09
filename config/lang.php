@@ -31,7 +31,8 @@ $aLang = [
         'stwebsite' => 'Página Web del Alumno',
         'imitation' => 'Página Imitada por Alumno',
         'return' => 'Volver',
-        'tools' => 'Herramientas y tecnologías utilizadas'
+        'tools' => 'Herramientas y tecnologías utilizadas',
+        'uppercase' => 'A mayúsculas'
     
     ],
     'en' => [
@@ -61,7 +62,8 @@ $aLang = [
         'stwebsite' => 'Student Website',
         'imitation' => 'Page Imitated By Student',
         'return' => 'Return',
-        'tools' => 'Tools and technologies used'
+        'tools' => 'Tools and technologies used',
+        'uppercase' => 'Uppercase'
     ]
 ];
 ?>

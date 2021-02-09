@@ -13,7 +13,8 @@ $controladores = [
     "registro" => "controller/cRegistro.php",
     "editProfile" => "controller/cMiCuenta.php",
     "deleteAccount" => "controller/cBorrarCuenta.php",
-    "rest"=>"controller/cREST.php"
+    "rest"=>"controller/cREST.php",
+    "mayus"=>"controller/cMayus.php"
 ];
 
 $vistas = [
@@ -24,7 +25,8 @@ $vistas = [
     "registro" => "view/vRegistro.php",
     "editProfile" => "view/vMiCuenta.php",
     "deleteAccount" => "view/vBorrarCuenta.php",
-    "rest"=>"view/vREST.php"
+    "rest"=>"view/vREST.php",
+    "mayus"=>"view/vMayus.php"
 ];
 
 ?>

@@ -4,8 +4,7 @@ function comprobarIntro() {
     var btEnter = document.getElementById("btEnter");
     for (var i = 0; i < aRequiredI.length; i++) {
         if (this.id === aRequiredI[i].id) {
-            this.value;
-            if (this.value > 0) {
+            if (this.value.length > 0) {
                 aValido[i] = true;
             } else {
                 aValido[i] = false;
@@ -17,6 +16,9 @@ function comprobarIntro() {
     } else {
         btEnter.disabled = false;
     }
+}
+function cambiarMayus(valor) {
+    return valor.toLowerCase();
 }
 
 function iniciar() {

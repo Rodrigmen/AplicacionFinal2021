@@ -16,7 +16,7 @@
         <input id="fechaR" type="date" name="fecha" max="<?php echo date('Y-m-d')?>" value="<?php echo date('Y-m-d') ?>"/>
 
         <div>
-            <button class="button" type="submit" name="Aceptar1"><?php echo $aLang[$_COOKIE['idioma']]['accept']; ?></button>
+            <button class="button" type="submit" name="Aceptar"><?php echo $aLang[$_COOKIE['idioma']]['accept']; ?></button>
         </div>
     </form>  
 

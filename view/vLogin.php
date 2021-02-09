@@ -1,4 +1,5 @@
 <main>
+    <script src="webroot/js/validacionFormularios.js" type="text/javascript"></script>
     <form id="login" class="otros" name="login" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
         <div class="required">
