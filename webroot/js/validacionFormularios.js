@@ -1,31 +1,33 @@
 var aRequiredI = document.getElementsByClassName("requiredI");
-var aRespuestas = [];
-function comprobarIntro(valor) {
-    var btLogin = document.getElementById("btLogin");
-    if (valor.length < 1) {
-        aRespuestas.push(false);
-    } else {
-        aRespuestas.push(true);
+var aValido = [];
+function comprobarIntro() {
+    var btEnter = document.getElementById("btEnter");
+    for (var i = 0; i < aRequiredI.length; i++) {
+        if (this.id === aRequiredI[i].id) {
+            this.value;
+            if (this.value > 0) {
+                aValido[i] = true;
+            } else {
+                aValido[i] = false;
+            }
+        }
     }
-    if (aRespuestas.length === aRequiredI.length) {
-        if (!aRespuestas.includes(false)) {
-            btLogin.disabled = false;
-        } else {
-            btLogin.disabled = true;
-        } 
-        console.log(aRespuestas);
-        aRespuestas = [];
+    if (aValido.includes(false)) {
+        btEnter.disabled = true;
+    } else {
+        btEnter.disabled = false;
     }
 }
 
 function iniciar() {
-    var btLogin = document.getElementById("btLogin");
-    for (var i = 0; i < aRequiredI.length; i++) {
-        aRequiredI[i].addEventListener("blur", function (event) {
-            comprobarIntro(this.value);
-        });
+    var btEnter = document.getElementById("btEnter");
+    for (var e = 0; e < aRequiredI.length; e++) {
+        aValido[e] = false;
     }
-    btLogin.disabled = true;
+    for (var i = 0; i < aRequiredI.length; i++) {
+        aRequiredI[i].addEventListener("keyup", comprobarIntro, false);
+    }
+    btEnter.disabled = true;
 }
 
 window.onload = iniciar;

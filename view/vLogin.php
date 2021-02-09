@@ -15,7 +15,7 @@
         </div>
 
         <div>
-            <button id="btLogin" class="button" type="submit" name="IniciarSesion"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></button>    
+            <button id="btEnter" class="button" type="submit" name="IniciarSesion"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></button>    
             <button class="button" name="Registrarse"><?php echo $aLang[$_COOKIE['idioma']]['signup']; ?></button> 
             <button class="button" name="Cancelar"><?php echo $aLang[$_COOKIE['idioma']]['cancel']; ?></button>
         </div>
