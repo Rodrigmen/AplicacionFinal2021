@@ -132,7 +132,32 @@ header img{
 body{
     background: #A9C6FF;
 }
-
+:disabled{
+    opacity: 0.5;
+}
+#volverR{
+    width: 20%;
+    margin-left: 40%;
+}
+.botones{
+    text-align: center;
+}
+.botones button{
+    width: 20%;
+    border: none;
+    background-color: #e7e7e7; 
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vh;
+    cursor: pointer;
+}
+.botones button:hover{
+    color:white;
+    background-color: black;
+    transition-duration: 500ms;
+}
 .botonesP{
     margin-top: -35%;
     width: 10%;

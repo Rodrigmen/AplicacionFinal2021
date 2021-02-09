@@ -1,4 +1,7 @@
 <main>
+    <form>
+        <button id="volverR" class="button" type="submit" name="Volver"><?php echo $aLang[$_COOKIE['idioma']]['return']; ?></button>
+    </form>
     <form class="rest"  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div id="respuestarest">
             <p id="titulorest"><?php echo $tituloEnCurso ?></p>
@@ -28,7 +31,6 @@
         <input id="nba" type="number" placeholder="1-30" max="30" min="1" name="numero" />
         <div>
             <button class="button" type="submit" name="Aceptar2"><?php echo $aLang[$_COOKIE['idioma']]['accept']; ?></button>
-            <button class="button" type="submit" name="Volver"><?php echo $aLang[$_COOKIE['idioma']]['return']; ?></button> 
         </div>
     </form> 
 </main>

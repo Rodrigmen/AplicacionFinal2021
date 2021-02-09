@@ -8,6 +8,7 @@
         <link rel="stylesheet"  href="webroot/css/estilos.css"       type="text/css" >
         <link rel="icon" type="image/jpg" href="../webroot/css/images/favicon.jpg"/>
         <script src="webroot/js/script.js" type="text/javascript"></script>
+        <script src="webroot/js/validacionFormularios.js" type="text/javascript"></script>
     </head>
     <header>
         <img id="logo" src="webroot/css/img/logo.jpg" alt=""/> 
