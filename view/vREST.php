@@ -5,15 +5,10 @@
     <form class="rest"  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div id="respuestarest">
             <p id="titulorest"><?php echo $tituloEnCurso ?></p>
-            <?php if (is_null($imagenEnCurso)) { ?>
-                <img width="30%" src="webroot/css/img/error429.jpg">
-            <?php } else { ?>
-                <img width="30%" src="<?php echo $imagenEnCurso ?>">
-            <?php } ?>     
-
+            <img width="30%" src="<?php echo $imagenEnCurso ?>">
             <p><?php echo $descripcionEnCurso ?></p>
         </div>
-        <input id="fechaR" type="date" name="fecha" max="<?php echo date('Y-m-d')?>" value="<?php echo date('Y-m-d') ?>"/>
+        <input id="fechaR" type="date" name="fecha" max="<?php echo date('Y-m-d') ?>" value="<?php echo $valorFecha ?>"/>
 
         <div>
             <button class="button" type="submit" name="Aceptar"><?php echo $aLang[$_COOKIE['idioma']]['accept']; ?></button>
@@ -28,7 +23,7 @@
             <p>Conferencia: <?php echo $conferencia ?></p>
             <p>División: <?php echo $division ?></p>
         </div>
-        <input id="nba" type="number" placeholder="1-30" max="30" min="1" name="numero" />
+        <input id="nba" type="number" max="30" min="1" name="numero" placeholder="1-30" value="<?php echo $valorNumero ?>"/>
         <div>
             <button class="button" type="submit" name="Aceptar2"><?php echo $aLang[$_COOKIE['idioma']]['accept']; ?></button>
         </div>

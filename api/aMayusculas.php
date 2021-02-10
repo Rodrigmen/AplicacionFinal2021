@@ -1,6 +1,6 @@
 <?php
 
-//http://192.168.1.240/proyectoDWES/AplicacionFinal2021/api/aMayusculas.php?cadena="hola"
+//https://daw218.ieslossauces.es/proyectoDWES/AplicacionFinal2021/api/aMayusculas.php?cadena="hola"
 
 header('Content-Type: application/json');
 if (isset($_GET["cadena"])) {

@@ -1,3 +1,13 @@
+<header>
+    <form class="botonesP" name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <button class="button" type="submit" name="IniciarSesion"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></button>    
+        <button class="button" type="submit" name="Registrarse"><?php echo $aLang[$_COOKIE['idioma']]['signup']; ?></button> 
+    </form>
+    <form class="botonesP2" name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <button <?php echo ($_COOKIE['idioma'] == "es") ? "style='color: orangered;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="es">Castellano</button>
+        <button <?php echo ($_COOKIE['idioma'] == "en") ? "style='color: orangered;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="en">English</button>
+    </form>
+</header>
 <main>
     <div class="slideshow-container">
 
@@ -43,12 +53,5 @@
         <span class="dot" onclick="currentSlide(7)"></span> 
     </div>
     <script src="webroot/js/scriptCarrusel.js" type="text/javascript"></script>
-    <form class="botonesP" name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <button class="button" type="submit" name="IniciarSesion"><?php echo $aLang[$_COOKIE['idioma']]['login']; ?></button>    
-        <button class="button" type="submit" name="Registrarse"><?php echo $aLang[$_COOKIE['idioma']]['signup']; ?></button> 
-    </form>
-    <form class="botonesP2" name="formularioIdioma" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <button <?php echo ($_COOKIE['idioma'] == "es") ? "style='color: orangered;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="es">Castellano</button>
-        <button <?php echo ($_COOKIE['idioma'] == "en") ? "style='color: orangered;'" : null; ?> class="idioma" type="submit" name="idiomaElegido" value="en">English</button>
-    </form>
+
 </main>

@@ -10,14 +10,16 @@ error_reporting(0);
 if (isset($_REQUEST['Aceptar'])) { //si se ha enviado una fecha
     //llamamos al servicio y le pasamos la fecha introducida por el usuario
     $aServicioAPOD = REST::sevicioAPOD($_REQUEST['fecha']);
+    $valorFecha = $_REQUEST['fecha'];
 } else {
     //llamamos al servicio y le pasamos la fecha de hoy
     $aServicioAPOD = REST::sevicioAPOD(date('Y-m-d'));
+    $valorFecha = date('Y-m-d');
 }
 error_reporting(-1);
 if (is_null($aServicioAPOD)) {
     $tituloEnCurso = "¡Demasiadas peticiones!";
-    $imagenEnCurso = null;
+    $imagenEnCurso = "webroot/css/img/error429.jpg";
     $descripcionEnCurso = null;
 } else {
     $tituloEnCurso = $aServicioAPOD['title'];
@@ -27,8 +29,10 @@ if (is_null($aServicioAPOD)) {
 if (isset($_REQUEST['Aceptar2'])) { //si se ha enviado una fecha
     //llamamos al servicio y le pasamos la fecha introducida por el usuario
     $ValoresEquipo = REST::sacarEquipo($_REQUEST['numero']);
+    $valorNumero = $_REQUEST['numero'];
 } else {
     $ValoresEquipo = null;
+    $valorNumero = 1;
 }
 if (is_null($ValoresEquipo) || sizeof($ValoresEquipo) < 7) {
     $nombreEquipo = "¡No se ha pedido nada!";

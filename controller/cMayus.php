@@ -10,7 +10,9 @@ if (isset($_REQUEST['Volver'])) { // si se ha pulsado el botón de editar perfil
 }
 if (isset($_REQUEST['Aceptar'])) {
     $mayus = REST::mayusculas($_REQUEST['cadena']);
+    $valorCadena = $_REQUEST['cadena'];
 } else {
+    $valorCadena = "";
     $mayus = "¡No se ha introducido nada!";
 }
 $vistaEnCurso = $vistas['mayus']; // guardamos en la variable vistaEnCurso la vista que queremos implementar

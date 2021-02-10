@@ -48,9 +48,9 @@ header img{
 /* Slideshow container */
 .slideshow-container {
     width: 70%;
-    height: 80%;
     position: relative;
     margin: auto;
+    margin-top: -1%;
 }
 .mySlides {
     display: none
@@ -132,7 +132,11 @@ body{
     background: #A9C6FF;
 }
 :disabled{
+    transition: 500ms;
     opacity: 0.5;
+}
+:enabled{
+    transition: 500ms;
 }
 #volverR{
     width: 20%;
@@ -157,9 +161,10 @@ body{
     background-color: black;
     transition-duration: 500ms;
 }
-.botonesP{
-    margin-top: -35%;
+.botonesP, .botonesP2{
     width: 10%;
+}
+.botonesP{
     margin-right: 5%;
     float:right; 
 }
@@ -167,8 +172,6 @@ body{
     margin-bottom: 1%;
 }
 .botonesP2{
-    margin-top: -35%;
-    width: 10%;
     margin-left: 5%;
     float:left;
 }
