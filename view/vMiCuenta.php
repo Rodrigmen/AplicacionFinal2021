@@ -13,6 +13,11 @@
             <label for="DescUsuario"><?php echo $aLang[$_COOKIE['idioma']]['description']; ?></label>
             <input type="text" class="requiredI" id="DescUsuario" name="DescUsuario"  value="<?php echo $DescUser ?>"/>
         </div>
+        <p class="erroresR">
+            <?php
+            echo ($aErrores['DescUsuario'] != null) ? $aErrores['DescUsuario'] : null; // si el campo es erroneo se muestra un mensaje de error
+            ?>
+        </p>
         <!-----------------PERFIL----------------->
         <div class="required">
             <label for="Perfil"><?php echo $aLang[$_COOKIE['idioma']]['profile']; ?></label>
