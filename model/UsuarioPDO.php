@@ -51,6 +51,15 @@ class UsuarioPDO {
         DBPDO::ejecutaConsulta($consulta, [time(), $codUsuario]);
     }
 
+    /**
+     * Método obtenerUltimaConexion()
+     * 
+     * Obtienes la última conexión del usuario.
+     * 
+     * @access public
+     * @param string $codUsuario Código del usuario
+     * @return null \ fecha Null o una fecha en formato timestamp.
+     */
     public static function obtenerUltimaConexion($codUsuario) {
         $fecha = null;
         $consulta = "SELECT T01_FechaHoraUltimaConexion FROM T01_Usuario WHERE T01_CodUsuario=?";
@@ -62,6 +71,15 @@ class UsuarioPDO {
         return $fecha;
     }
 
+    /**
+     * Método obtenerNumConexion()
+     * 
+     * Obtienes el número total de conexiones establecidas por el usuario.
+     * 
+     * @access public
+     * @param string $codUsuario Código del usuario
+     * @return null \ numero Null o un número entero.
+     */
     public static function obtenerNumConexion($codUsuario) {
         $numero = null;
         $consulta = "SELECT T01_NumConexiones FROM T01_Usuario WHERE T01_CodUsuario=?";

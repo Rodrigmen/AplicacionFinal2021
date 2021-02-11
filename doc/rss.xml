@@ -7,15 +7,21 @@
         <language> es </language>
         <copyright> © Rodrigo Robles </copyright>
         <item>
-            <title>Nueva funcionalidad: Api - REST</title>
+            <title>Nueva funcionalidad: API - REST</title>
             <description>Creada esta nueva funcionalidad para la app</description>
             <pubDate>Thu, 28 Jan 2021 12:34:00 EST</pubDate>
             <author>rodrigo.robmin@educa.jcyl.es </author>
         </item>
         <item>
-            <title>Update: Api - REST and more</title>
+            <title>Update: API - REST and more</title>
             <description>Ahora funciona completamente esta funcionalidad</description>
             <pubDate>Tue, 02 Feb 2021 13:32:00 EST</pubDate>
+            <author>rodrigo.robmin@educa.jcyl.es </author>
+        </item>
+        <item>
+            <title>Update: Mi propia API y validación JS</title>
+            <description>He implementado a la aplicación una API creada por mi mismo y valido mediante JS los formularios que lo necesitan</description>
+            <pubDate>Thu, 11 Feb 2021 10:55:00 EST</pubDate>
             <author>rodrigo.robmin@educa.jcyl.es </author>
         </item>
     </channel>
