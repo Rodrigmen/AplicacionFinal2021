@@ -24,5 +24,11 @@
             <pubDate>Thu, 11 Feb 2021 10:55:00 EST</pubDate>
             <author>rodrigo.robmin@educa.jcyl.es </author>
         </item>
+        <item>
+            <title>Update: API ajena de un compañero</title>
+            <description>He implementado a la aplicación una API creada por mun compañero de clase</description>
+            <pubDate>Thu, 11 Feb 2021 13:24:00 EST</pubDate>
+            <author>rodrigo.robmin@educa.jcyl.es </author>
+        </item>
     </channel>
 </rss>

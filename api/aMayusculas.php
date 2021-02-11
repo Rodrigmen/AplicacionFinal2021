@@ -4,6 +4,6 @@
 
 header('Content-Type: application/json');
 if (isset($_GET["cadena"])) {
-    $resultado = strtoupper($_GET["cadena"]);
+    $resultado = mb_strtoupper($_GET["cadena"],'utf-8');
     echo json_encode($resultado);
 }

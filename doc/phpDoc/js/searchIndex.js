@@ -256,6 +256,11 @@ Search.appendIndex(
             "summary": "Obtiene\u0020informaci\u00F3n\u0020de\u0020una\u0020mi\u0020propia\u0020API",
             "url": "classes/REST.html#method_mayusculas"
         },                {
+            "fqsen": "\\REST\u003A\u003Abinarios\u0028\u0029",
+            "name": "binarios",
+            "summary": "Obtiene\u0020informaci\u00F3n\u0020de\u0020la\u0020API\u0020de\u0020Nerea\u0020\u00C1lvarez",
+            "url": "classes/REST.html#method_binarios"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",

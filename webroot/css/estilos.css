@@ -208,10 +208,8 @@ fieldset{
     margin-top: 10%;
 }
 .rest{
-    margin: 10%;
-    margin-right: 1%;
-    margin-top: 1%;
-    float:left;
+    width: 35%; 
+    margin: 7% auto;
     font-size: 2vh;
     width: 35%;
     border-radius:10px;
@@ -353,8 +351,7 @@ form input[name="cambiarPassword"]:hover{
     font-size: 4vh;
 
 }
-
-#fechaR, #nba, #cadena{
+.rest input{
     margin-left: 25%;
 }
 .errores{
@@ -460,11 +457,6 @@ footer ul li a:hover{
     .otros{
         width:80%;
         margin-top: 30%;
-    }
-    .rest{
-        margin: 12%;
-        width: 75%;
-
     }
     .respuesta{
         margin: auto;

@@ -32,7 +32,7 @@ if (isset($_REQUEST['Aceptar2'])) { //si se ha enviado una fecha
     $valorNumero = $_REQUEST['numero'];
 } else {
     $ValoresEquipo = null;
-    $valorNumero = 1;
+    $valorNumero = "";
 }
 if (is_null($ValoresEquipo) || sizeof($ValoresEquipo) < 7) {
     $nombreEquipo = "¡No se ha pedido nada!";
@@ -46,6 +46,22 @@ if (is_null($ValoresEquipo) || sizeof($ValoresEquipo) < 7) {
     $ciudad = $ValoresEquipo['city'];
     $conferencia = $ValoresEquipo['conference'];
     $division = $ValoresEquipo['division'];
+}
+if (isset($_REQUEST['Aceptar3'])) {
+    $mayus = REST::mayusculas($_REQUEST['cadena']);
+    
+    $valorCadena = $_REQUEST['cadena'];
+} else {
+    $valorCadena = "";
+    $mayus = "¡No se ha introducido nada (Cacácteres especiales introducirlos en mayúscula[ej: Á])!";
+}
+if (isset($_REQUEST['Aceptar4'])) {
+    $binario = REST::binarios($_REQUEST['numero2']);
+    
+    $valorNumero= $_REQUEST['numero2'];
+} else {
+    $valorNumero = "";
+    $binario = "¡No se ha introducido nada!";
 }
 $vistaEnCurso = $vistas['rest']; // guardamos en la variable vistaEnCurso la vista que queremos implementar
 require_once $vistas['layout'];

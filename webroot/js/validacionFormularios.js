@@ -14,7 +14,7 @@ function comprobarEntrada() {
     }
 }
 function comprobarIntro() {
-var btEnter = document.getElementById("btEnter");
+    var btEnter = document.getElementById("btEnter");
     for (var i = 0; i < aRequiredI.length; i++) {
         if (this.id === aRequiredI[i].id) {
             if (this.value.length > 0) {
@@ -29,9 +29,6 @@ var btEnter = document.getElementById("btEnter");
     } else {
         btEnter.disabled = false;
     }
-}
-function cambiarMayus(valor) {
-    return valor.toLowerCase();
 }
 
 function iniciar() {
