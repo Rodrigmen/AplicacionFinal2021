@@ -1,13 +1,12 @@
 <?php
 
-            
-        require_once "../config/confDBPDO.php";//Incluimos el archivo confDBPDO.php para poder acceder al valor de las constantes de los distintos valores de la conexión 
-        
-            try {
-                $miDB = new PDO(DNS,USER,PASSWORD);//Instanciamos un objeto PDO y establecemos la conexión
-                $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//Configuramos las excepciones
-                
-                $sql = <<<EOD
+require_once "../config/confDBPDO.php"; //Incluimos el archivo confDBPDO.php para poder acceder al valor de las constantes de los distintos valores de la conexión 
+
+try {
+    $miDB = new PDO(DNS, USER, PASSWORD); //Instanciamos un objeto PDO y establecemos la conexión
+    $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Configuramos las excepciones
+
+    $sql = <<<EOD
                         INSERT INTO T02_Departamento(T02_CodDepartamento, T02_DescDepartamento, T02_FechaCreacionDepartamento, T02_VolumenNegocio) VALUES
                             ('INF', 'Departamento de informatica',1606156754, 5),
                             ('VEN', 'Departamento de ventas',1606156754, 8),
@@ -38,18 +37,17 @@
 							
 						INSERT INTO T01_Usuario(T01_CodUsuario, T01_DescUsuario, T01_Password, T01_Perfil) VALUES ('admin','admin',SHA2('adminpaso',256), 'administrador');
 EOD;
-                
-                $miDB->exec($sql);
-                
-                echo "<h3> <span style='color: green;'>"."Valores insertados</span></h3>";//Si no se ha producido ningún error nos mostrará "Conexión establecida con éxito"
-            }
-            catch (PDOException $excepcion) {//Código que se ejecutará si se produce alguna excepción
-                $errorExcepcion = $excepcion->getCode();//Almacenamos el código del error de la excepción en la variable $errorExcepcion
-                $mensajeExcepcion = $excepcion->getMessage();//Almacenamos el mensaje de la excepción en la variable $mensajeExcepcion
-                
-                echo "<span style='color: red;'>Error: </span>".$mensajeExcepcion."<br>";//Mostramos el mensaje de la excepción
-                echo "<span style='color: red;'>Código del error: </span>".$errorExcepcion;//Mostramos el código de la excepción
-            } finally {
-                unset($miDB);
-            }
+
+    $miDB->exec($sql);
+
+    echo "<h3> <span style='color: green;'>" . "Valores insertados</span></h3>"; //Si no se ha producido ningún error nos mostrará "Conexión establecida con éxito"
+} catch (PDOException $excepcion) {//Código que se ejecutará si se produce alguna excepción
+    $errorExcepcion = $excepcion->getCode(); //Almacenamos el código del error de la excepción en la variable $errorExcepcion
+    $mensajeExcepcion = $excepcion->getMessage(); //Almacenamos el mensaje de la excepción en la variable $mensajeExcepcion
+
+    echo "<span style='color: red;'>Error: </span>" . $mensajeExcepcion . "<br>"; //Mostramos el mensaje de la excepción
+    echo "<span style='color: red;'>Código del error: </span>" . $errorExcepcion; //Mostramos el código de la excepción
+} finally {
+    unset($miDB);
+}
 ?>

@@ -45,4 +45,36 @@ class REST {
         return json_decode(file_get_contents("https://www.balldontlie.io/api/v1/teams/$number"), true);
     }
 
+    /**
+     * Obtiene información de una mi propia API
+     * 
+     * Esta función se encarga de obtener y descodificar un .json con los datos recibidos 
+     * tras una consulta a la API con un parámetro insertado. En este caso introduces una cadena de
+     * texto en minúscula y la obtienes en mayúscula
+     * 
+     * 
+     * @access public
+     * @param $cadena Cadena de texto introducida en minúscula
+     * @return array Array con los valores del .json
+     */
+    public static function mayusculas($cadena) {
+        return json_decode(file_get_contents("https://daw218.ieslossauces.es/proyectoDWES/AplicacionFinal2021/api/aMayusculas.php?cadena=$cadena"), true);
+    }
+    
+     /**
+     * Obtiene información de la API de Nerea Álvarez
+     * 
+     * Esta función se encarga de obtener y descodificar un .json con los datos recibidos 
+     * tras una consulta a la API con un parámetro insertado. En este caso introduces una cadena de
+     * texto en minúscula y la obtienes en mayúscula
+     * 
+     * 
+     * @access public
+     * @param $numero Número entero introducido
+     * @return array Array con los valores del .json
+     */
+    public static function binarios($numero) {
+        return json_decode(file_get_contents("https://daw212.ieslossauces.es/proyectoDWES/proyectoTema6/App2021/api/decBin.php?number=$numero"), true);
+    }
+
 }

@@ -17,6 +17,8 @@
         <button class="logout" type="submit" name='deleteAccount'><?php echo $aLang[$_COOKIE['idioma']]['deleteAccount']; ?></button>
         <div class="opciones">
             <button type="submit" name='rest'><img src="webroot/css/img/rest.png" alt=""/></button>
+            <button type="submit" disabled name='mayus'><img src="webroot/css/img/mayus.png" alt=""/></button>
+            <button type="submit" disabled name='mantenimiento'><img src="webroot/css/img/mantenimiento.png" alt=""/></button>
         </div>
     </form>
 

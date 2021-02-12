@@ -206,6 +206,16 @@ Search.appendIndex(
             "summary": "M\u00E9todo\u0020actualizarUltimaConexion\u0028\u0029",
             "url": "classes/UsuarioPDO.html#method_actualizarUltimaConexion"
         },                {
+            "fqsen": "\\UsuarioPDO\u003A\u003AobtenerUltimaConexion\u0028\u0029",
+            "name": "obtenerUltimaConexion",
+            "summary": "M\u00E9todo\u0020obtenerUltimaConexion\u0028\u0029",
+            "url": "classes/UsuarioPDO.html#method_obtenerUltimaConexion"
+        },                {
+            "fqsen": "\\UsuarioPDO\u003A\u003AobtenerNumConexion\u0028\u0029",
+            "name": "obtenerNumConexion",
+            "summary": "M\u00E9todo\u0020obtenerNumConexion\u0028\u0029",
+            "url": "classes/UsuarioPDO.html#method_obtenerNumConexion"
+        },                {
             "fqsen": "\\UsuarioPDO\u003A\u003AborrarUsuario\u0028\u0029",
             "name": "borrarUsuario",
             "summary": "M\u00E9todo\u0020borrarUsuario\u0028\u0029",
@@ -240,6 +250,16 @@ Search.appendIndex(
             "name": "sacarEquipo",
             "summary": "Obtiene\u0020informaci\u00F3n\u0020de\u0020una\u0020API\u0020de\u0020la\u0020NBA",
             "url": "classes/REST.html#method_sacarEquipo"
+        },                {
+            "fqsen": "\\REST\u003A\u003Amayusculas\u0028\u0029",
+            "name": "mayusculas",
+            "summary": "Obtiene\u0020informaci\u00F3n\u0020de\u0020una\u0020mi\u0020propia\u0020API",
+            "url": "classes/REST.html#method_mayusculas"
+        },                {
+            "fqsen": "\\REST\u003A\u003Abinarios\u0028\u0029",
+            "name": "binarios",
+            "summary": "Obtiene\u0020informaci\u00F3n\u0020de\u0020la\u0020API\u0020de\u0020Nerea\u0020\u00C1lvarez",
+            "url": "classes/REST.html#method_binarios"
         },                {
             "fqsen": "\\",
             "name": "\\",

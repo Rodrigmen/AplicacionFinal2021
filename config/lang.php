@@ -30,15 +30,9 @@ $aLang = [
         'documentation' => 'Documentación',
         'stwebsite' => 'Página Web del Alumno',
         'imitation' => 'Página Imitada por Alumno',
-        'catalog' => 'Catálogo de requisitos',
-        'diagram1' => 'Diagrama de casos de uso',
-        'diagram2' => 'Diagrama de clases',
-        'tree' => 'Árbol de navegación',
-        'map' => 'Mapa web',
-        'storage' => 'Estructura de almacenamiento',
-        'fisical' => 'Modelo físico de datos',
         'return' => 'Volver',
-        'tools' => 'Herramientas y tecnologías utilizadas'
+        'tools' => 'Herramientas y tecnologías utilizadas',
+        'uppercase' => 'A mayúsculas'
     
     ],
     'en' => [
@@ -67,15 +61,9 @@ $aLang = [
         'documentation' => 'Documentation',
         'stwebsite' => 'Student Website',
         'imitation' => 'Page Imitated By Student',
-        'catalog' => 'Requirements Catalog',
-        'diagram1' => 'Use case diagram',
-        'diagram2' => 'Class diagram',
-        'tree' => 'Navigation tree',
-        'map' => 'Web map',
-        'storage' => 'Storage structure',
-        'fisical' => 'Physical data model',
         'return' => 'Return',
-        'tools' => 'Tools and technologies used'
+        'tools' => 'Tools and technologies used',
+        'uppercase' => 'Uppercase'
     ]
 ];
 ?>

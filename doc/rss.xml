@@ -1,16 +1,34 @@
 <rss version="2.0">
     <channel>
         <title>Aplicación Final 2020-2021</title>
-        <link>https://daw218.ieslossauces.es/proyectoDWES/AplicacionLoginLogoffMulticapaPOO/index.php</link>
+        <link>https://daw218.ieslossauces.es/proyectoDWES/AplicacionFinal2021/index.php</link>
         <description>Aplicación final del curso de Rodrigo Robles de 2º DAW</description>
-        <category> Aplicación </category>
+        <category>IT/Internet/Web development</category>
         <language> es </language>
-        <copyright> © </copyright>
+        <copyright> © Rodrigo Robles </copyright>
         <item>
-            <title>Nueva funcionalidad: Api - REST</title>
+            <title>Nueva funcionalidad: API - REST</title>
+            <description>Creada esta nueva funcionalidad para la app</description>
             <pubDate>Thu, 28 Jan 2021 12:34:00 EST</pubDate>
             <author>rodrigo.robmin@educa.jcyl.es </author>
-            <guid> </guid>
+        </item>
+        <item>
+            <title>Update: API - REST and more</title>
+            <description>Ahora funciona completamente esta funcionalidad</description>
+            <pubDate>Tue, 02 Feb 2021 13:32:00 EST</pubDate>
+            <author>rodrigo.robmin@educa.jcyl.es </author>
+        </item>
+        <item>
+            <title>Update: Mi propia API y validación JS</title>
+            <description>He implementado a la aplicación una API creada por mi mismo y valido mediante JS los formularios que lo necesitan</description>
+            <pubDate>Thu, 11 Feb 2021 10:55:00 EST</pubDate>
+            <author>rodrigo.robmin@educa.jcyl.es </author>
+        </item>
+        <item>
+            <title>Update: API ajena de un compañero</title>
+            <description>He implementado a la aplicación una API creada por mun compañero de clase</description>
+            <pubDate>Thu, 11 Feb 2021 13:24:00 EST</pubDate>
+            <author>rodrigo.robmin@educa.jcyl.es </author>
         </item>
     </channel>
 </rss>

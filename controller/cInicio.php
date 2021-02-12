@@ -9,7 +9,8 @@ $aCaminos = [
     "cerrarSesion",
     "editProfile",
     "deleteAccount",
-    "rest"
+    "rest",
+    "mayus"
 ];
 
 foreach ($aCaminos as $direccion) {
@@ -17,6 +18,7 @@ foreach ($aCaminos as $direccion) {
         switch ($direccion) {
             case 'cerrarSesion':
                 session_destroy(); // destruye todos los datos asociados a la sesion
+                $_SESSION['paginaEnCurso'] = $controladores['principal'];
                 break;
             case 'editProfile':
                 $_SESSION['paginaEnCurso'] = $controladores['editProfile'];
@@ -27,6 +29,9 @@ foreach ($aCaminos as $direccion) {
             case 'rest':
                 $_SESSION['paginaEnCurso'] = $controladores['rest'];
                 break;
+            case 'mayus':
+                $_SESSION['paginaEnCurso'] = $controladores['mayus'];
+                break;
         }
         header("Location: index.php"); // redirige al login
     }
@@ -36,7 +41,12 @@ $CodUser = $usuarioActual->getCodUsuario();
 $DescUser = $usuarioActual->getDescUsuario();
 $Profile = $usuarioActual->getPerfil();
 $ConexNumber = UsuarioPDO::obtenerNumConexion($CodUser);
-$LastDateConex = date('d/m/Y H:i:s', UsuarioPDO::obtenerUltimaConexion($CodUser));
+if ($ConexNumber > 1) {
+    $LastDateConex = date('d/m/Y H:i:s', $usuarioActual->getFechaHoraUltimaConexion());
+} else {
+    $LastDateConex = null;
+}
+
 
 $vistaEnCurso = $vistas['inicio'];
 require_once $vistas['layout'];
