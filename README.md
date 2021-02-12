@@ -1,9 +1,9 @@
 # AppFinalRodrigo2021
 Módulo: DWES
 
-Descripción: Aplicación Final Raúl 2021
+Descripción: Aplicación Final de Rodrigo 2020/21
 Fecha Inicio: 11/01/2021
-Última Actualización: 11/02/2021
+Última Actualización: 12/02/2021
 
 Autor: Rodrigo Robles Miñambres
 
