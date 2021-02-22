@@ -14,7 +14,7 @@ $controladores = [
     "editProfile" => "controller/cMiCuenta.php",
     "deleteAccount" => "controller/cBorrarCuenta.php",
     "rest"=>"controller/cREST.php",
-    "mayus"=>"controller/cMayus.php"
+    "mantenimiento"=>"controller/cMtoDepartamentos.php"
 ];
 
 $vistas = [
@@ -26,7 +26,7 @@ $vistas = [
     "editProfile" => "view/vMiCuenta.php",
     "deleteAccount" => "view/vBorrarCuenta.php",
     "rest"=>"view/vREST.php",
-    "mayus"=>"view/vMayus.php"
+    "mantenimiento"=>"view/vMtoDepartamentos.php"
 ];
 
 ?>

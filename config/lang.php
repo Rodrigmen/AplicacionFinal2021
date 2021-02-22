@@ -32,7 +32,8 @@ $aLang = [
         'imitation' => 'Página Imitada por Alumno',
         'return' => 'Volver',
         'tools' => 'Herramientas y tecnologías utilizadas',
-        'uppercase' => 'A mayúsculas'
+        'uppercase' => 'A mayúsculas',
+        'maintenance' => 'Mantenimiento Departamentos'
     
     ],
     'en' => [
@@ -63,7 +64,8 @@ $aLang = [
         'imitation' => 'Page Imitated By Student',
         'return' => 'Return',
         'tools' => 'Tools and technologies used',
-        'uppercase' => 'Uppercase'
+        'uppercase' => 'Uppercase',
+        'maintenance' => 'Maintenance Departments'
     ]
 ];
 ?>
