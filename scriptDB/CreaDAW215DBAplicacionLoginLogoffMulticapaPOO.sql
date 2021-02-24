@@ -17,7 +17,6 @@ CREATE TABLE IF NOT EXISTS DAW218DBProyectoTema5.T01_Usuario(
     T01_NumConexiones INT DEFAULT 0,
     T01_FechaHoraUltimaConexion INT,
     T01_Perfil enum('administrador', 'usuario') DEFAULT 'usuario',
-    T01_ImagenUsuario mediumblob NULL
 )ENGINE=INNODB;
 
 -- CREACION USUARIO ADMINISTRADOR
