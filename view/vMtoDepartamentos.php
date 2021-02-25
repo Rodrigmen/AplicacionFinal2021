@@ -27,19 +27,23 @@
             <tbody>
                 <?php
                 foreach ($arrayDepartamentos as $departamento => $oDepartamento) {
+                    $codigoDep = $oDepartamento->getCodDepartamento();
+                    
                     if (is_null($oDepartamento->getFechaBaja())) {
                         $fechaBaja = "Ninguna (Activo)";
                     } else {
                         $fechaBaja = date('d/m/Y', $oDepartamento->getFechaBaja());
                     }
-                    //var_dump($oDepartamento);
                     ?>
                     <tr>
-                        <td><?php echo $oDepartamento->getCodDepartamento(); ?></td>
+                        <td><?php echo $codigoDep ?></td>
                         <td><?php echo $oDepartamento->getDescDepartamento(); ?></td>
                         <td><?php echo $oDepartamento->getVolumenNegocio(); ?></td>
                         <td><?php echo date('d/m/Y', $oDepartamento->getFechaCreacion()); ?></td>
                         <td><?php echo $fechaBaja; ?></td>
+                        <!--<td>
+                            <button name="editarDepartamento" value="<?php echo $codigoDep ?>"><img src="webroot/css/img/editar.png" alt=""/></button>
+                        </td>-->
                     </tr>
                 <?php }
                 ?>

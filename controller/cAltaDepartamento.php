@@ -21,7 +21,7 @@ $aErrores = [//declaro e inicializo el array de errores
 
 
 if (isset($_REQUEST["Aceptar"])) { // comprueba que el usuario le ha dado a al boton de IniciarSesion y valida la entrada de todos los campos
-    $aErrores['EcodDep'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['codigo'], 3, 3, OBLIGATORIO); // comprueba que la entrada del codigo de usuario es correcta
+    $aErrores['EcodDep'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['codDep'], 3, 3, OBLIGATORIO); // comprueba que la entrada del codigo de usuario es correcta
 
     if ($aErrores['EcodDep'] == null && !DepartamentoPDO::validarDepNoExiste($_REQUEST['codDep'])) { // si no ha habido error en el campo CodUsuario y que no exista el nombre de usuario en la base de datos
         $aErrores['EcodDep'] = "El código del departamento ya existe"; // guarda en el array de errores el men saje de error
@@ -29,7 +29,7 @@ if (isset($_REQUEST["Aceptar"])) { // comprueba que el usuario le ha dado a al b
 
     $aErrores['EdescDep'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['descDep'], 35, 1, OBLIGATORIO); // comprueba que la entrada del codigo de usuario es correcta
 
-    $aErrores['EvolDep'] = validacionFormularios::comprobarEntero($_REQUEST['volDep'], PHP_INT_MAX, 1, REQUIRED);
+    $aErrores['EvolDep'] = validacionFormularios::comprobarEntero($_REQUEST['volDep'], PHP_INT_MAX, 1, OBLIGATORIO);
 
     foreach ($aErrores as $campo => $error) { // recorro el array de errores
         if ($error != null) { // compruebo si hay algun mensaje de error en algun campo
