@@ -33,7 +33,9 @@ $aLang = [
         'return' => 'Volver',
         'tools' => 'Herramientas y tecnologías utilizadas',
         'uppercase' => 'A mayúsculas',
-        'maintenance' => 'Mantenimiento Departamentos'
+        'maintenance' => 'Mantenimiento Departamentos',
+        'search' => 'Buscar',
+        'insert' => 'Insertar Departamento'
     
     ],
     'en' => [
@@ -65,7 +67,9 @@ $aLang = [
         'return' => 'Return',
         'tools' => 'Tools and technologies used',
         'uppercase' => 'Uppercase',
-        'maintenance' => 'Maintenance Departments'
+        'maintenance' => 'Maintenance Departments',
+        'search' => 'Search',
+        'insert' => 'Insert Departament'
     ]
 ];
 ?>
