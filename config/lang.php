@@ -35,7 +35,9 @@ $aLang = [
         'uppercase' => 'A mayúsculas',
         'maintenance' => 'Mantenimiento Departamentos',
         'search' => 'Buscar',
-        'insert' => 'Insertar Departamento'
+        'insert' => 'Insertar Departamento',
+        'code' => "Código",
+        "volume" => "Volumen"
     
     ],
     'en' => [
@@ -69,7 +71,9 @@ $aLang = [
         'uppercase' => 'Uppercase',
         'maintenance' => 'Maintenance Departments',
         'search' => 'Search',
-        'insert' => 'Insert Departament'
+        'insert' => 'Insert Departament',
+        'code' => "Code",
+        "volume" => "Volume"
     ]
 ];
 ?>

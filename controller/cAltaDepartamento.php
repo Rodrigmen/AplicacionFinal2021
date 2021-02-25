@@ -14,27 +14,22 @@ define("OBLIGATORIO", 1); // defino e inicializo la constante a 1 para los campo
 $entradaOK = true;
 
 $aErrores = [//declaro e inicializo el array de errores
-    'CodUsuario' => null,
-    'DescUsuario' => null,
-    'Password' => null,
-    'PasswordConfirmacion' => null
+    'EcodDep' => null,
+    'EdescDep' => null,
+    'EvolDep' => null,
 ];
 
 
 if (isset($_REQUEST["Aceptar"])) { // comprueba que el usuario le ha dado a al boton de IniciarSesion y valida la entrada de todos los campos
-    $aErrores['CodUsuario'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['CodUsuario'], 15, 3, OBLIGATORIO); // comprueba que la entrada del codigo de usuario es correcta
+    $aErrores['EcodDep'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['codigo'], 3, 3, OBLIGATORIO); // comprueba que la entrada del codigo de usuario es correcta
 
-    if ($aErrores['CodUsuario'] == null && UsuarioPDO::validarCodNoExiste($_REQUEST['CodUsuario']) == false) { // si no ha habido error en el campo CodUsuario y que no exista el nombre de usuario en la base de datos
-        $aErrores['CodUsuario'] = "El nombre de usuario ya existe"; // guarda en el array de errores el men saje de error
+    if ($aErrores['EcodDep'] == null && !DepartamentoPDO::validarDepNoExiste($_REQUEST['codDep'])) { // si no ha habido error en el campo CodUsuario y que no exista el nombre de usuario en la base de datos
+        $aErrores['EcodDep'] = "El código del departamento ya existe"; // guarda en el array de errores el men saje de error
     }
 
-    $aErrores['DescUsuario'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['DescUsuario'], 255, 3, OBLIGATORIO); // comprueba que la entrada del codigo de usuario es correcta
+    $aErrores['EdescDep'] = validacionFormularios::comprobarAlfaNumerico($_REQUEST['descDep'], 35, 1, OBLIGATORIO); // comprueba que la entrada del codigo de usuario es correcta
 
-    $aErrores['Password'] = validacionFormularios::validarPassword($_REQUEST['Password'], 8, 1, 1, OBLIGATORIO); // comprueba que la entrada del password es correcta
-    $aErrores['PasswordConfirmacion'] = validacionFormularios::validarPassword($_REQUEST['PasswordConfirmacion'], 8, 1, 1, OBLIGATORIO); // comprueba que la entrada del password es correcta
-    if ($_REQUEST['Password'] != $_REQUEST['PasswordConfirmacion']) {
-        $aErrores['PasswordConfirmacion'] = "Las contraseñas no coinciden";
-    }
+    $aErrores['EvolDep'] = validacionFormularios::comprobarEntero($_REQUEST['volDep'], PHP_INT_MAX, 1, REQUIRED);
 
     foreach ($aErrores as $campo => $error) { // recorro el array de errores
         if ($error != null) { // compruebo si hay algun mensaje de error en algun campo
@@ -47,10 +42,8 @@ if (isset($_REQUEST["Aceptar"])) { // comprueba que el usuario le ha dado a al b
 }
 
 if ($entradaOK) { // si la entrada esta bien recojo los valores introducidos y hago su tratamiento
-    $oUsuario = UsuarioPDO::altaUsuario($_REQUEST['CodUsuario'], $_REQUEST['Password'], $_REQUEST['DescUsuario']); // guardamos en la variable el resultado de la funcion que valida si existe un usuario con el codigo y password introducido
-    $_SESSION['usuarioDAW2LoginLogoffMulticapaPOO'] = $oUsuario; // guarda en la session el objeto usuario
-    $_SESSION['paginaEnCurso'] = $controladores['inicio']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del inicio
-
+    DepartamentoPDO::insertarDepartamento($_REQUEST['codDep'], $_REQUEST['descDep'], $_REQUEST['volDep']);
+    $_SESSION['paginaEnCurso'] = $controladores['mantenimiento']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del inicio
     header('Location: index.php'); // redirige al index.php
     exit;
 }
