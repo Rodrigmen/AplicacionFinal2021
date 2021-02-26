@@ -12,7 +12,7 @@
             <button class="button" type="submit" name="Volver"><?php echo $aLang[$_COOKIE['idioma']]['return']; ?></button>
         </div> 
     </form>
-    <table>
+    <table id="departamentos">
         <thead>
             <tr>
                 <th>Código</th>
@@ -20,7 +20,7 @@
                 <th>Volumen de negocio</th>
                 <th>Fecha de creación</th>
                 <th>Fecha de baja</th>
-                <th>Opciones</th>
+                <th colspan="4">Opciones</th>
             </tr>
         </thead>
         <?php if (count($arrayDepartamentos) > 0) { ?>
@@ -28,7 +28,7 @@
                 <?php
                 foreach ($arrayDepartamentos as $departamento => $oDepartamento) {
                     $codigoDep = $oDepartamento->getCodDepartamento();
-                    
+
                     if (is_null($oDepartamento->getFechaBaja())) {
                         $fechaBaja = "Ninguna (Activo)";
                     } else {
@@ -41,9 +41,21 @@
                         <td><?php echo $oDepartamento->getVolumenNegocio(); ?></td>
                         <td><?php echo date('d/m/Y', $oDepartamento->getFechaCreacion()); ?></td>
                         <td><?php echo $fechaBaja; ?></td>
-                        <!--<td>
-                            <button name="editarDepartamento" value="<?php echo $codigoDep ?>"><img src="webroot/css/img/editar.png" alt=""/></button>
-                        </td>-->
+                        <td>
+                            <button class="options" name="editarDepartamento" value="<?php echo $codigoDep ?>"><img src="webroot/css/img/editar.png" alt=""/></button>
+                            <button class="options" name="verDepartamento" value="<?php echo $codigoDep ?>"><img src="webroot/css/img/analitica.png" alt=""/></button>
+                            <button class="options" name="eliminarDepartamento" value="<?php echo $codigoDep ?>"><img src="webroot/css/img/eliminar.png" alt=""/></button>
+                            <?php
+                            if (is_null($oDepartamento->getFechaBaja())) {
+                                $nombre = "deshabilitarDerpartamento";
+                                $imagen = "habilitado";
+                            } else {
+                                $nombre = "habilitarDerpartamento";
+                                $imagen = "inhabilitado";
+                            }
+                            ?>
+                            <button class="options" name="<?php $nombre ?>" value="<?php echo $codigoDep ?>"><img width="20px" src="webroot/css/img/<?php echo "$imagen.png" ?>" alt=""/></button>
+                        </td>
                     </tr>
                 <?php }
                 ?>

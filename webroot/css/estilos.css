@@ -360,6 +360,22 @@ form input[name="cambiarPassword"]:hover{
     color:red;
     margin:1% auto;
 }
+.options img{
+    width: 30px;
+    height: 30px;
+}
+.options{
+    cursor:pointer; 
+     background-color: transparent;
+     border:none;
+}
+
+#departamentos{
+    margin:auto;
+    width: 90%;
+    display: table;
+    margin-bottom: 10%;
+}
 .required{
     background-color: #ADB9C5;
 }
