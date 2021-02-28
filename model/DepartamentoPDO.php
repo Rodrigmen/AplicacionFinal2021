@@ -13,6 +13,17 @@
  */
 class DepartamentoPDO {
 
+    public static function borrarDepartamento($codigo) {
+        $borrado = false;
+        $consulta = "DELETE FROM T02_Departamento WHERE T02_CodDepartamento=?";
+        $resultado = DBPDO::ejecutaConsulta($consulta, [$codigo]);
+
+        if ($resultado) {
+            $borrado = true;
+        }
+        return $borrado;
+    }
+
     public static function obtenerDepartamento($codigo) {
         $consulta = "SELECT * FROM T02_Departamento WHERE T02_CodDepartamento=?";
         $resultado = DBPDO::ejecutaConsulta($consulta, [$codigo]);
@@ -23,12 +34,11 @@ class DepartamentoPDO {
         return $oDepartamento;
     }
 
-    public static function modificarDepartamento($codigo, $descripion, $volumen) {
-
+    public static function modificarDepartamento($descripcion, $volumen, $codigo) {
         $departamentoModificado = false; // declaramos e inicializamos $departamentoModificado a false
 
-        $sentenciaSQL = "Update T02_Departamento set T02_DescDepartamento=?, T02_VolumenNegocio=? where T02_CodDepartamento=?";
-        $resultadoConsulta = DBPDO::ejecutarConsulta($sentenciaSQL, [$descripion, $volumen, $codigo]); // almacenamos en la variable $resultadoConsulta el resultado obtenido al ejecutar la consulta
+        $sentenciaSQL = "UPDATE T02_Departamento SET (T02_DescDepartamento=?, T02_VolumenNegocio=?) WHERE T02_CodDepartamento=?";
+        $resultadoConsulta = DBPDO::ejecutarConsulta($sentenciaSQL, [$descripcion, $volumen, $codigo]); // almacenamos en la variable $resultadoConsulta el resultado obtenido al ejecutar la consulta
 
         if ($resultadoConsulta) { // si la consulta se ha ejecutado correctamente
             $departamentoModificado = true; // cambiamos el valor de la variable $departamentoModificado a true

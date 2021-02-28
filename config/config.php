@@ -19,7 +19,8 @@ $controladores = [
     "rest" => "controller/cREST.php",
     "mantenimiento" => "controller/cMtoDepartamentos.php",
     "altaDepartamento" => "controller/cAltaDepartamento.php",
-    "modificarDepartamento" => "controller/cConsultarModificarDepartamento.php"
+    "modificarDepartamento" => "controller/cConsultarModificarDepartamento.php",
+    "eliminarDepartamento" => "controller/cEliminarDepartamento.php"
 ];
 
 $vistas = [
@@ -33,6 +34,7 @@ $vistas = [
     "rest" => "view/vREST.php",
     "mantenimiento" => "view/vMtoDepartamentos.php",
     "altaDepartamento" => "view/vAltaDepartamento.php",
-    "modificarDepartamento" => "view/vConsultarModificarDepartamento.php"
+    "modificarDepartamento" => "view/vConsultarModificarDepartamento.php",
+    "eliminarDepartamento" => "view/vEliminarDepartamento.php"
 ];
 ?>

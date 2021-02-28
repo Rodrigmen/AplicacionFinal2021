@@ -40,7 +40,8 @@ $aLang = [
         "volume" => "Volumen",
         "modify" => "Modificar",
         "creation" => "Fecha de creación",
-        "leavingdate" => "Fecha de baja"
+        "leavingdate" => "Fecha de baja",
+        "delete" => "Borrar"
     
     ],
     'en' => [
@@ -79,7 +80,8 @@ $aLang = [
         "volume" => "Volume",
         "modify" => "Modify",
         "creation" => "Creation date",
-        "leavingdate" => "Leaving date"
+        "leavingdate" => "Leaving date",
+        "delete" => "Delete"
     ]
 ];
 ?>

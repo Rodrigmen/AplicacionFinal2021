@@ -41,8 +41,7 @@ if (isset($_REQUEST["Aceptar"])) { // comprueba que el usuario le ha dado a al b
     $entradaOK = false; // le doy el valor false a $entradaOK
 }
 
-if ($entradaOK) { // si la entrada esta bien recojo los valores introducidos y hago su tratamiento
-    DepartamentoPDO::modificarDepartamento($_REQUEST['CodDep'], $_REQUEST['DescDep'], $_REQUEST['VolDep']);
+if ($entradaOK && DepartamentoPDO::modificarDepartamento($_REQUEST['DescDep'], $_REQUEST['VolDep'], $_SESSION['codDepartamento'])) { // si la entrada esta bien recojo los valores introducidos y hago su tratamiento
     $_SESSION['paginaEnCurso'] = $controladores['mantenimiento']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del inicio
 
     header('Location: index.php'); // redirige al index.php
