@@ -37,7 +37,10 @@ $aLang = [
         'search' => 'Buscar',
         'insert' => 'Insertar Departamento',
         'code' => "Código",
-        "volume" => "Volumen"
+        "volume" => "Volumen",
+        "modify" => "Modificar",
+        "creation" => "Fecha de creación",
+        "leavingdate" => "Fecha de baja"
     
     ],
     'en' => [
@@ -73,7 +76,10 @@ $aLang = [
         'search' => 'Search',
         'insert' => 'Insert Departament',
         'code' => "Code",
-        "volume" => "Volume"
+        "volume" => "Volume",
+        "modify" => "Modify",
+        "creation" => "Creation date",
+        "leavingdate" => "Leaving date"
     ]
 ];
 ?>

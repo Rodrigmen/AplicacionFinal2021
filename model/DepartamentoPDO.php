@@ -13,6 +13,30 @@
  */
 class DepartamentoPDO {
 
+    public static function obtenerDepartamento($codigo) {
+        $consulta = "SELECT * FROM T02_Departamento WHERE T02_CodDepartamento=?";
+        $resultado = DBPDO::ejecutaConsulta($consulta, [$codigo]);
+
+        if ($resultado->rowCount() > 0) {
+            $oDepartamento = $resultado->fetchObject();
+        }
+        return $oDepartamento;
+    }
+
+    public static function modificarDepartamento($codigo, $descripion, $volumen) {
+
+        $departamentoModificado = false; // declaramos e inicializamos $departamentoModificado a false
+
+        $sentenciaSQL = "Update T02_Departamento set T02_DescDepartamento=?, T02_VolumenNegocio=? where T02_CodDepartamento=?";
+        $resultadoConsulta = DBPDO::ejecutarConsulta($sentenciaSQL, [$descripion, $volumen, $codigo]); // almacenamos en la variable $resultadoConsulta el resultado obtenido al ejecutar la consulta
+
+        if ($resultadoConsulta) { // si la consulta se ha ejecutado correctamente
+            $departamentoModificado = true; // cambiamos el valor de la variable $departamentoModificado a true
+        }
+
+        return $departamentoModificado;
+    }
+
     public static function busquedaDepartamento($busqueda) {
 
         $consulta = "SELECT * FROM T02_Departamento WHERE T02_DescDepartamento LIKE CONCAT('%', ?, '%')";
@@ -47,15 +71,15 @@ class DepartamentoPDO {
     }
 
     public static function insertarDepartamento($codigo, $descripcion, $volumen) {
-        $alta =false;
+        $alta = false;
 
         $consulta = "Insert into T02_Departamento (T02_CodDepartamento, T02_DescDepartamento, T02_VolumenNegocio, T02_FechaCreacionDepartamento) values (?,?,?,?)";
         $resultado = DBPDO::ejecutaConsulta($consulta, [$codigo, $descripcion, $volumen, time()]);
 
-        if($resultado){
-            $alta=true;
+        if ($resultado) {
+            $alta = true;
         }
-        
+
         return $alta;
     }
 

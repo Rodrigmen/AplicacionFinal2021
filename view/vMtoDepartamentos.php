@@ -11,60 +11,59 @@
             <button class="button" type="submit" name="insertar"><?php echo $aLang[$_COOKIE['idioma']]['insert']; ?></button>
             <button class="button" type="submit" name="Volver"><?php echo $aLang[$_COOKIE['idioma']]['return']; ?></button>
         </div> 
-    </form>
-    <table id="departamentos">
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Descripción</th>
-                <th>Volumen de negocio</th>
-                <th>Fecha de creación</th>
-                <th>Fecha de baja</th>
-                <th colspan="4">Opciones</th>
-            </tr>
-        </thead>
-        <?php if (count($arrayDepartamentos) > 0) { ?>
-            <tbody>
-                <?php
-                foreach ($arrayDepartamentos as $departamento => $oDepartamento) {
-                    $codigoDep = $oDepartamento->getCodDepartamento();
 
-                    if (is_null($oDepartamento->getFechaBaja())) {
-                        $fechaBaja = "Ninguna (Activo)";
-                    } else {
-                        $fechaBaja = date('d/m/Y', $oDepartamento->getFechaBaja());
-                    }
+        <table id="departamentos">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Volumen de negocio</th>
+                    <th>Fecha de creación</th>
+                    <th>Fecha de baja</th>
+                    <th colspan="3">Opciones</th>
+                </tr>
+            </thead>
+            <?php if (count($arrayDepartamentos) > 0) { ?>
+                <tbody>
+                    <?php
+                    foreach ($arrayDepartamentos as $departamento => $oDepartamento) {
+                        $codigoDep = $oDepartamento->getCodDepartamento();
+
+                        if (is_null($oDepartamento->getFechaBaja())) {
+                            $fechaBaja = "Ninguna (Activo)";
+                        } else {
+                            $fechaBaja = date('d/m/Y', $oDepartamento->getFechaBaja());
+                        }
+                        ?>
+                        <tr>
+                            <td><?php echo $codigoDep ?></td>
+                            <td><?php echo $oDepartamento->getDescDepartamento(); ?></td>
+                            <td><?php echo $oDepartamento->getVolumenNegocio(); ?></td>
+                            <td><?php echo date('d/m/Y', $oDepartamento->getFechaCreacion()); ?></td>
+                            <td><?php echo $fechaBaja; ?></td>
+                            <td>
+                                <button class="options" name="editarDepartamento" value="<?php echo $codigoDep ?>"><img src="webroot/css/img/editar.png" alt=""/></button>
+                                <button class="options" name="eliminarDepartamento" value="<?php echo $codigoDep ?>"><img src="webroot/css/img/eliminar.png" alt=""/></button>
+                                <?php
+                                if (is_null($oDepartamento->getFechaBaja())) {
+                                    $nombre = "deshabilitarDerpartamento";
+                                    $imagen = "habilitado";
+                                } else {
+                                    $nombre = "habilitarDerpartamento";
+                                    $imagen = "inhabilitado";
+                                }
+                                ?>
+                                <button class="options" name="<?php $nombre ?>" value="<?php echo $codigoDep ?>"><img width="20px" src="webroot/css/img/<?php echo "$imagen.png" ?>" alt=""/></button>
+                            </td>
+                        </tr>
+                    <?php }
                     ?>
-                    <tr>
-                        <td><?php echo $codigoDep ?></td>
-                        <td><?php echo $oDepartamento->getDescDepartamento(); ?></td>
-                        <td><?php echo $oDepartamento->getVolumenNegocio(); ?></td>
-                        <td><?php echo date('d/m/Y', $oDepartamento->getFechaCreacion()); ?></td>
-                        <td><?php echo $fechaBaja; ?></td>
-                        <td>
-                            <button class="options" name="editarDepartamento" value="<?php echo $codigoDep ?>"><img src="webroot/css/img/editar.png" alt=""/></button>
-                            <button class="options" name="verDepartamento" value="<?php echo $codigoDep ?>"><img src="webroot/css/img/analitica.png" alt=""/></button>
-                            <button class="options" name="eliminarDepartamento" value="<?php echo $codigoDep ?>"><img src="webroot/css/img/eliminar.png" alt=""/></button>
-                            <?php
-                            if (is_null($oDepartamento->getFechaBaja())) {
-                                $nombre = "deshabilitarDerpartamento";
-                                $imagen = "habilitado";
-                            } else {
-                                $nombre = "habilitarDerpartamento";
-                                $imagen = "inhabilitado";
-                            }
-                            ?>
-                            <button class="options" name="<?php $nombre ?>" value="<?php echo $codigoDep ?>"><img width="20px" src="webroot/css/img/<?php echo "$imagen.png" ?>" alt=""/></button>
-                        </td>
-                    </tr>
-                <?php }
+                </tbody>
+                <?php
+            } else {
                 ?>
-            </tbody>
-            <?php
-        } else {
-            ?>
-            <h4>¡No se ha encontrado ningún departamento por esa descripción!</h4>
-        <?php } ?>
-
-    </table>
+                <h4>¡No se ha encontrado ningún departamento por esa descripción!</h4>
+            <?php } ?>
+        </table>
+    </form>
 </main>

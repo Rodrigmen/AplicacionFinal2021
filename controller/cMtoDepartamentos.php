@@ -7,7 +7,12 @@ if (isset($_REQUEST['Volver'])) { // si se ha pulsado el botón de editar perfil
     header('Location: index.php'); //enviamos al usuario de vuelta al index
     exit;
 }
-
+if (isset($_REQUEST['editarDepartamento'])) { // si se ha pulsado el botón de editar perfil
+    $_SESSION['codDepartamento'] = $_REQUEST['editarDepartamento'];
+    $_SESSION['paginaEnCurso'] = $controladores['modificarDepartamento']; //guardamos en la sesión el controlador que debe ejecutarse
+    header('Location: index.php'); //enviamos al usuario de vuelta al index
+    exit;
+}
 if (isset($_REQUEST['buscar'])) {
     $descripcionBuscada = $_REQUEST['descripcion'];
 } else {

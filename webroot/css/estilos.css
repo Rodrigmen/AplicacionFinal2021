@@ -365,11 +365,19 @@ form input[name="cambiarPassword"]:hover{
     height: 30px;
 }
 .options{
+    border: 2px solid black;
+    width: 32%;
     cursor:pointer; 
-     background-color: transparent;
-     border:none;
+    background-color: transparent;
+    border:none;
 }
 
+#busqueda{
+    width: 90%;
+}
+#buscar{
+    width: 15%;
+}
 #departamentos{
     margin:auto;
     width: 90%;
