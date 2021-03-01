@@ -1,10 +1,9 @@
 <main>
-    <script src="webroot/js/validacionFormularios.js" type="text/javascript"></script>
     <form name="singup" id="registro" class="otros"  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <!-----------------CÓDIGO----------------->
         <div class="required">
             <label for="CodDep"><?php echo $aLang[$_COOKIE['idioma']]['code']; ?></label>
-            <input class="lectura" type="text" id="CodUsuario" name="CodDep" class="lectura" value="<?php echo $CodDep ?>" readonly>
+            <input class="lectura" type="text" id="CodUsuario" name="CodDep" value="<?php echo $CodDep ?>" readonly>
         </div>
 
         <!-----------------DESCRIPCIÓN----------------->

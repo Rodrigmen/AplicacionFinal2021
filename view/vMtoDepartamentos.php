@@ -9,6 +9,7 @@
             ?>"/>
             <button id="buscar" class="button" type="submit" name="buscar"><?php echo $aLang[$_COOKIE['idioma']]['search']; ?></button>
             <button class="button" type="submit" name="insertar"><?php echo $aLang[$_COOKIE['idioma']]['insert']; ?></button>
+            <button class="button" type="submit" name="exportar"><?php echo $aLang[$_COOKIE['idioma']]['export']; ?> (XML)</button>
             <button class="button" type="submit" name="Volver"><?php echo $aLang[$_COOKIE['idioma']]['return']; ?></button>
         </div> 
 

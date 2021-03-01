@@ -43,7 +43,8 @@ $aLang = [
         "leavingdate" => "Fecha de baja",
         "delete" => "Borrar",
         "disable" => "Deshabilitar",
-        "enable" => "Habilitar"
+        "enable" => "Habilitar",
+        "export" => "Exportar"
     
     ],
     'en' => [
@@ -85,7 +86,8 @@ $aLang = [
         "leavingdate" => "Leaving date",
         "delete" => "Delete",
         "disable" => "Disable",
-        "enable" => "Enable"
+        "enable" => "Enable",
+        "export" => "Export"
     ]
 ];
 ?>

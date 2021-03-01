@@ -1,17 +1,39 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of DepartamentoPDO
  *
  * @author daw2
  */
 class DepartamentoPDO {
+
+    public static function exportar() {
+        $fechaActual = date('Ymd'); // variable que almacena formateada la fecha actual
+
+        $sentenciaSQL = "Select * from T02_Departamento";
+        $resultadoConsulta = DBPDO::ejecutaConsulta($sentenciaSQL, []); // almacenamos en la variable $resultadoConsulta el resultado obtenido al ejecutar la consulta
+        if ($resultadoConsulta != null) { // si se ha ejecutado la consulta
+            $documentoXML = new DOMDocument("1.0", "utf-8"); // creo el objeto de tipo DOMDocument que recibe 2 parametros: ela version y la codificacion del XML que queremos crear
+            $documentoXML->formatOutput = true; // establece la salida formateada
+            $root = $documentoXML->appendChild($documentoXML->createElement('Departamentos')); // creo el nodo raiz
+            $oDepartamento = $resultadoConsulta->fetchObject(); // Obtengo el primer registro de la consulta como un objeto
+            while ($oDepartamento) { // recorro los registros que devuelve la consulta y por cada uno de ellos ejecuto el codigo siguiente
+                $departamento = $root->appendChild($documentoXML->createElement('Departamento')); // creo el nodo para el departamento 
+                $departamento->appendChild($documentoXML->createElement('CodDepartamento', $oDepartamento->T02_CodDepartamento)); // añado como hijo el codigo de departamento con su valor
+                $departamento->appendChild($documentoXML->createElement('DescDepartamento', $oDepartamento->T02_DescDepartamento)); // añado como hijo la descripcion del departamento con su valor
+                $departamento->appendChild($documentoXML->createElement('FechaCreacionDepartamento', $oDepartamento->T02_FechaCreacionDepartamento)); // añado como hijo la fecha de creacion del departamento con su valor
+                $departamento->appendChild($documentoXML->createElement('VolumenNegocio', $oDepartamento->T02_VolumenNegocio)); // añado como hijo el volumen de negocio del departamento con su valor
+                $departamento->appendChild($documentoXML->createElement('FechaBajaDepartamento', $oDepartamento->T02_FechaBajaDepartamento)); // añado como hijo la fecha de baja del departamento con su valor
+                $oDepartamento = $resultadoConsulta->fetchObject(); // guardo el registro actual como un objeto y avanzo el puntero al siguiente registro de la consulta
+            }
+
+            $documentoXML->save('./tmp/' . $fechaActual . "DepartamentosR.xml"); // si se guarda el arbol XML en la ruta especificada con la fecha del dia que se ejecuta
+
+            header('Content-Type: text/xml'); // indicamos que la salida será de tipo xml
+            header("Content-Disposition: attachment; filename=" . $fechaActual . "DepartamentosR.xml"); // indicaremos que el archivo se va a descargar con el atributo attachment y que el nombre del fichero sera el valor de filename
+            exit;
+        }
+    }
 
     public static function altaDepartamento($codigo) {
         $habilitado = false;
@@ -23,7 +45,7 @@ class DepartamentoPDO {
         }
         return $habilitado;
     }
-    
+
     public static function bajarDepartamento($codigo, $fechaBaja) {
         $fecha = new DateTime($fechaBaja);
         $deshabilitado = false;
@@ -35,7 +57,7 @@ class DepartamentoPDO {
         }
         return $deshabilitado;
     }
-    
+
     public static function borrarDepartamento($codigo) {
         $borrado = false;
         $consulta = "DELETE FROM T02_Departamento WHERE T02_CodDepartamento=?";

@@ -2,37 +2,46 @@
 
 $titulo = $aLang[$_COOKIE['idioma']]['maintenance'];
 
-if (isset($_REQUEST['Volver'])) { // si se ha pulsado el botón de editar perfil
-    $_SESSION['paginaEnCurso'] = $controladores['inicio']; //guardamos en la sesión el controlador que debe ejecutarse
-    header('Location: index.php'); //enviamos al usuario de vuelta al index
-    exit;
-}
-if (isset($_REQUEST['editarDepartamento'])) { // si se ha pulsado el botón de editar perfil
-    $_SESSION['codDepartamento'] = $_REQUEST['editarDepartamento'];
-    $_SESSION['paginaEnCurso'] = $controladores['modificarDepartamento']; //guardamos en la sesión el controlador que debe ejecutarse
-    header('Location: index.php'); //enviamos al usuario de vuelta al index
-    exit;
-}
-if (isset($_REQUEST['eliminarDepartamento'])) { // si se ha pulsado el botón de editar perfil
-    $_SESSION['codDepartamento'] = $_REQUEST['eliminarDepartamento'];
-    $_SESSION['paginaEnCurso'] = $controladores['eliminarDepartamento']; //guardamos en la sesión el controlador que debe ejecutarse
-    header('Location: index.php'); //enviamos al usuario de vuelta al index
-    exit;
-}
-if (isset($_REQUEST['deshabilitarDepartamento'])) { // si se ha pulsado el botón de editar perfil
-    $_SESSION['codDepartamento'] = $_REQUEST['deshabilitarDepartamento'];
-    $_SESSION['paginaEnCurso'] = $controladores['bajaDepartamento']; //guardamos en la sesión el controlador que debe ejecutarse
-    header('Location: index.php'); //enviamos al usuario de vuelta al index
-    exit;
-}
+$aCaminos = [
+    "Volver",
+    "editarDepartamento",
+    "eliminarDepartamento",
+    "deshabilitarDepartamento",
+    "habilitarDepartamento",
+    "importar",
+    "exportar"
+];
 
-if (isset($_REQUEST['habilitarDepartamento'])) { // si se ha pulsado el botón de editar perfil
-    $_SESSION['codDepartamento'] = $_REQUEST['habilitarDepartamento'];
-    $_SESSION['paginaEnCurso'] = $controladores['altaLogicaDepartamento']; //guardamos en la sesión el controlador que debe ejecutarse
-    header('Location: index.php'); //enviamos al usuario de vuelta al index
-    exit;
+foreach ($aCaminos as $direccion) {
+    if (isset($_REQUEST[$direccion])) {
+        switch ($direccion) {
+            case 'Volver':
+                session_destroy(); // destruye todos los datos asociados a la sesion
+                $_SESSION['paginaEnCurso'] = $controladores['inicio'];
+                break;
+            case 'editarDepartamento':
+                $_SESSION['paginaEnCurso'] = $controladores['modificarDepartamento'];
+                break;
+            case 'eliminarDepartamento':
+                $_SESSION['paginaEnCurso'] = $controladores['eliminarDepartamento'];
+                break;
+            case 'deshabilitarDepartamento':
+                $_SESSION['paginaEnCurso'] = $controladores['bajaDepartamento'];
+                break;
+            case 'habilitarDepartamento':
+                $_SESSION['paginaEnCurso'] = $controladores['altaLogicaDepartamento'];
+                break;
+            case 'importar':
+                DepartamentoPDO::importar();
+                break;
+            case 'exportar':
+                DepartamentoPDO::exportar();
+                break;
+        }
+        $_SESSION['codDepartamento'] = $_REQUEST[$direccion];
+        header("Location: index.php"); // redirige al login
+    }
 }
-
 if (isset($_REQUEST['buscar'])) {
     $descripcionBuscada = $_REQUEST['descripcion'];
 } else {

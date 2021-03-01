@@ -8,8 +8,8 @@
         <link rel="stylesheet"  href="webroot/css/estilos.css"       type="text/css" >
         <link rel="icon" type="image/jpg" href="../webroot/css/images/favicon.jpg"/>
     </head>
-     <header>
-      <img id="logo" src="webroot/css/img/logo.jpg" alt=""/> 
+    <header>
+        <img id="logo" src="webroot/css/img/logo.jpg" alt=""/> 
         <h1 id="titulo"><?php echo $titulo ?></h1>
     </header>
     <body>
