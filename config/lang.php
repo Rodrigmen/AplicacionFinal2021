@@ -32,7 +32,19 @@ $aLang = [
         'imitation' => 'Página Imitada por Alumno',
         'return' => 'Volver',
         'tools' => 'Herramientas y tecnologías utilizadas',
-        'uppercase' => 'A mayúsculas'
+        'uppercase' => 'A mayúsculas',
+        'maintenance' => 'Mantenimiento Departamentos',
+        'search' => 'Buscar',
+        'insert' => 'Insertar Departamento',
+        'code' => "Código",
+        "volume" => "Volumen",
+        "modify" => "Modificar",
+        "creation" => "Fecha de creación",
+        "leavingdate" => "Fecha de baja",
+        "delete" => "Borrar",
+        "disable" => "Deshabilitar",
+        "enable" => "Habilitar",
+        "export" => "Exportar"
     
     ],
     'en' => [
@@ -63,7 +75,19 @@ $aLang = [
         'imitation' => 'Page Imitated By Student',
         'return' => 'Return',
         'tools' => 'Tools and technologies used',
-        'uppercase' => 'Uppercase'
+        'uppercase' => 'Uppercase',
+        'maintenance' => 'Maintenance Departments',
+        'search' => 'Search',
+        'insert' => 'Insert Departament',
+        'code' => "Code",
+        "volume" => "Volume",
+        "modify" => "Modify",
+        "creation" => "Creation date",
+        "leavingdate" => "Leaving date",
+        "delete" => "Delete",
+        "disable" => "Disable",
+        "enable" => "Enable",
+        "export" => "Export"
     ]
 ];
 ?>
