@@ -37,8 +37,8 @@ class DepartamentoPDO {
     public static function modificarDepartamento($descripcion, $volumen, $codigo) {
         $departamentoModificado = false; // declaramos e inicializamos $departamentoModificado a false
 
-        $sentenciaSQL = "UPDATE T02_Departamento SET (T02_DescDepartamento=?, T02_VolumenNegocio=?) WHERE T02_CodDepartamento=?";
-        $resultadoConsulta = DBPDO::ejecutarConsulta($sentenciaSQL, [$descripcion, $volumen, $codigo]); // almacenamos en la variable $resultadoConsulta el resultado obtenido al ejecutar la consulta
+        $sentenciaSQL = "UPDATE T02_Departamento SET T02_DescDepartamento=?, T02_VolumenNegocio=? WHERE T02_CodDepartamento=?";
+        $resultadoConsulta = DBPDO::ejecutaConsulta($sentenciaSQL, [$descripcion, $volumen, $codigo]); // almacenamos en la variable $resultadoConsulta el resultado obtenido al ejecutar la consulta
 
         if ($resultadoConsulta) { // si la consulta se ha ejecutado correctamente
             $departamentoModificado = true; // cambiamos el valor de la variable $departamentoModificado a true
@@ -48,7 +48,7 @@ class DepartamentoPDO {
     }
 
     public static function busquedaDepartamento($busqueda) {
-
+        $aDepartamentos = null;
         $consulta = "SELECT * FROM T02_Departamento WHERE T02_DescDepartamento LIKE CONCAT('%', ?, '%')";
         $resultado = DBPDO::ejecutaConsulta($consulta, [$busqueda]);
 

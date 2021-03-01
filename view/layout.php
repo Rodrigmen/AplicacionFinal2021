@@ -40,6 +40,9 @@
                 <li>
                     <a target="_blank" href="doc/rss.xml">RSS <img src="webroot/css/img/rss.png" alt=""/></a>
                 </li>
+                <li>
+                    <a target="_blank" href="doc/CV2.pdf">Curriculum <img src="webroot/css/img/curri.png" alt=""/></a>
+                </li>
             </ul>            
         </footer>
     </body>

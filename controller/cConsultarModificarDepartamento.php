@@ -12,6 +12,8 @@ $CodDep = $_SESSION['codDepartamento'];
 $DescDep = $oDepartamento->T02_DescDepartamento;
 if (!is_null($oDepartamento->T02_FechaBajaDepartamento)) {
     $FechaBaja = date('d/m/Y', $oDepartamento->T02_FechaBajaDepartamento);
+}else{
+   $FechaBaja = null; 
 }
 $FechaCreacion = date('d/m/Y', $oDepartamento->T02_FechaCreacionDepartamento);
 $VolDep = $oDepartamento->T02_VolumenNegocio;
