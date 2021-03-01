@@ -1,15 +1,13 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * Description of Modelo
+ * Class Departamento
  *
- * @author daw2
+ * Clase utilizada para instanciar objetos 'Departamento'
+ * 
+ * @author Rodrigo Robles Miñambres
+ * @copyright 01-03-2021
+ * @version 1.0
  */
 class Departamento {
     private $codDepartamento;

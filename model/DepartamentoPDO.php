@@ -1,15 +1,19 @@
 <?php
 
 /**
- * Description of DepartamentoPDO
+ * Class DepartamentoPDO
  *
- * @author daw2
+ * Clase cuyos métodos se encargan de realizar operaciones con los usuarios.
+ * Es decir, consultas a la tabla T02_Departamento.
+ * 
+ * @author Rodrigo Robles Miñambres
+ * @copyright 01-03-2021
+ * @version 1.0
  */
 class DepartamentoPDO {
 
     public static function exportar() {
         $fechaActual = date('Ymd'); // variable que almacena formateada la fecha actual
-
         $sentenciaSQL = "Select * from T02_Departamento";
         $resultadoConsulta = DBPDO::ejecutaConsulta($sentenciaSQL, []); // almacenamos en la variable $resultadoConsulta el resultado obtenido al ejecutar la consulta
         if ($resultadoConsulta != null) { // si se ha ejecutado la consulta
@@ -26,9 +30,7 @@ class DepartamentoPDO {
                 $departamento->appendChild($documentoXML->createElement('FechaBajaDepartamento', $oDepartamento->T02_FechaBajaDepartamento)); // añado como hijo la fecha de baja del departamento con su valor
                 $oDepartamento = $resultadoConsulta->fetchObject(); // guardo el registro actual como un objeto y avanzo el puntero al siguiente registro de la consulta
             }
-
             $documentoXML->save('./tmp/' . $fechaActual . "DepartamentosR.xml"); // si se guarda el arbol XML en la ruta especificada con la fecha del dia que se ejecuta
-
             header('Content-Type: text/xml'); // indicamos que la salida será de tipo xml
             header("Content-Disposition: attachment; filename=" . $fechaActual . "DepartamentosR.xml"); // indicaremos que el archivo se va a descargar con el atributo attachment y que el nombre del fichero sera el valor de filename
             exit;
