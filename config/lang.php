@@ -41,7 +41,9 @@ $aLang = [
         "modify" => "Modificar",
         "creation" => "Fecha de creación",
         "leavingdate" => "Fecha de baja",
-        "delete" => "Borrar"
+        "delete" => "Borrar",
+        "disable" => "Deshabilitar",
+        "enable" => "Habilitar"
     
     ],
     'en' => [
@@ -81,7 +83,9 @@ $aLang = [
         "modify" => "Modify",
         "creation" => "Creation date",
         "leavingdate" => "Leaving date",
-        "delete" => "Delete"
+        "delete" => "Delete",
+        "disable" => "Disable",
+        "enable" => "Enable"
     ]
 ];
 ?>

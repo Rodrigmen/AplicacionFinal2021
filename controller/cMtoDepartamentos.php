@@ -19,6 +19,20 @@ if (isset($_REQUEST['eliminarDepartamento'])) { // si se ha pulsado el botón de
     header('Location: index.php'); //enviamos al usuario de vuelta al index
     exit;
 }
+if (isset($_REQUEST['deshabilitarDepartamento'])) { // si se ha pulsado el botón de editar perfil
+    $_SESSION['codDepartamento'] = $_REQUEST['deshabilitarDepartamento'];
+    $_SESSION['paginaEnCurso'] = $controladores['bajaDepartamento']; //guardamos en la sesión el controlador que debe ejecutarse
+    header('Location: index.php'); //enviamos al usuario de vuelta al index
+    exit;
+}
+
+if (isset($_REQUEST['habilitarDepartamento'])) { // si se ha pulsado el botón de editar perfil
+    $_SESSION['codDepartamento'] = $_REQUEST['habilitarDepartamento'];
+    $_SESSION['paginaEnCurso'] = $controladores['altaLogicaDepartamento']; //guardamos en la sesión el controlador que debe ejecutarse
+    header('Location: index.php'); //enviamos al usuario de vuelta al index
+    exit;
+}
+
 if (isset($_REQUEST['buscar'])) {
     $descripcionBuscada = $_REQUEST['descripcion'];
 } else {

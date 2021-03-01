@@ -27,7 +27,7 @@
             ?>
             <!-----------------FECHA BAJA----------------->
             <div class="required">
-                <label for="fechaBaja"><?php echo $aLang[$_COOKIE['idioma']]['NumConex']; ?></label>
+                <label for="fechaBaja"><?php echo $aLang[$_COOKIE['idioma']]['leavingdate']; ?></label>
                 <input class="lectura" type="text" id="fechaBaja" name="fechaBaja" value="<?php echo $FechaBaja?>" readonly/>
             </div>
             <?php

@@ -16,22 +16,16 @@
             <label for="fechaCreacion"><?php echo $aLang[$_COOKIE['idioma']]['creation']; ?></label>
             <input class="lectura" type="text" id="fechaCreacion" name="fechaCreacion"  class="lectura"value="<?php echo $FechaCreacion ?>" readonly/>
         </div>
-        <?php
-        if (!is_null($FechaBaja)) {
-            ?>
-            <!-----------------FECHA BAJA----------------->
-            <div class="required">
-                <label for="fechaBaja"><?php echo $aLang[$_COOKIE['idioma']]['leavingdate']; ?></label>
-                <input class="lectura" type="text" id="fechaBaja" name="fechaBaja" value="<?php echo $FechaBaja ?>" readonly/>
-            </div>
-            <?php
-        }
-        ?>
-
         <!-----------------VOLUMEN----------------->
         <div class="required">
             <label for="VolDep"><?php echo $aLang[$_COOKIE['idioma']]['volume']; ?></label>
-            <input  type="number" id="Ultima" name="VolDep" value="<?php echo $VolDep ?>" readonlu/>
+            <input  type="number" id="Ultima" name="VolDep" value="<?php echo $VolDep ?>" readonly/>
+        </div>
+        
+        <!-----------------FECHA BAJA----------------->
+        <div class="required">
+            <label for="fechaBaja"><?php echo $aLang[$_COOKIE['idioma']]['leavingdate']; ?></label>
+            <input  type="date" id="fechaBaja" name="fechaBaja" min="<?php echo date('Y-m-d') ?>" value="<?php echo date('Y-m-d') ?>"/>
         </div>
         <div>
             <button class="button" type="submit" name="Aceptar"><?php echo $aLang[$_COOKIE['idioma']]['accept']; ?></button>    

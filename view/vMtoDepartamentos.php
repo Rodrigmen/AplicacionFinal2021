@@ -53,14 +53,14 @@
                                     <button class="options" name="eliminarDepartamento" value="<?php echo $codigoDep ?>"><img src="webroot/css/img/eliminar.png" alt=""/></button>
                                     <?php
                                     if (is_null($oDepartamento->getFechaBaja())) {
-                                        $nombre = "deshabilitarDerpartamento";
-                                        $imagen = "habilitado";
-                                    } else {
-                                        $nombre = "habilitarDerpartamento";
+                                        $nombre = "deshabilitarDepartamento";
                                         $imagen = "inhabilitado";
+                                    } else {
+                                        $nombre = "habilitarDepartamento";
+                                        $imagen = "habilitado";
                                     }
                                     ?>
-                                    <button class="options" name="<?php $nombre ?>" value="<?php echo $codigoDep ?>"><img width="20px" src="webroot/css/img/<?php echo "$imagen.png" ?>" alt=""/></button>
+                                    <button class="options" name="<?php echo $nombre ?>" value="<?php echo $codigoDep ?>"><img width="20px" src="webroot/css/img/<?php echo "$imagen.png" ?>" alt=""/></button>
                                 </td>
                             </tr>
                         <?php }

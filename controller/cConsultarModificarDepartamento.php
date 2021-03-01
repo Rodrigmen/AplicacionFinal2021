@@ -1,6 +1,6 @@
 <?php
 
-$titulo = $aLang[$_COOKIE['idioma']]['modify'] . $_SESSION['codDepartamento'];
+$titulo = $aLang[$_COOKIE['idioma']]['modify'] ." ". $_SESSION['codDepartamento'];
 if (isset($_REQUEST['Cancelar'])) {
     $_SESSION['paginaEnCurso'] = $controladores['mantenimiento']; // guardamos en la variable de sesion 'pagina' la ruta del controlador del login
     header('Location: index.php');

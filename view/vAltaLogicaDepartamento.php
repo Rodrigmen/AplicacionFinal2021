@@ -16,17 +16,11 @@
             <label for="fechaCreacion"><?php echo $aLang[$_COOKIE['idioma']]['creation']; ?></label>
             <input class="lectura" type="text" id="fechaCreacion" name="fechaCreacion"  class="lectura"value="<?php echo $FechaCreacion ?>" readonly/>
         </div>
-        <?php
-        if (!is_null($FechaBaja)) {
-            ?>
-            <!-----------------FECHA BAJA----------------->
-            <div class="required">
-                <label for="fechaBaja"><?php echo $aLang[$_COOKIE['idioma']]['leavingdate']; ?></label>
-                <input class="lectura" type="text" id="fechaBaja" name="fechaBaja" value="<?php echo $FechaBaja ?>" readonly/>
-            </div>
-            <?php
-        }
-        ?>
+        <!-----------------FECHA BAJA----------------->
+        <div class="required">
+            <label for="fechaBaja"><?php echo $aLang[$_COOKIE['idioma']]['leavingdate']; ?></label>
+            <input class="lectura" type="text" id="fechaBaja" name="fechaBaja" value="<?php echo $FechaBaja ?>" readonly/>
+        </div>
 
         <!-----------------VOLUMEN----------------->
         <div class="required">

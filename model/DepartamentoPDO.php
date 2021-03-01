@@ -13,6 +13,29 @@
  */
 class DepartamentoPDO {
 
+    public static function altaDepartamento($codigo) {
+        $habilitado = false;
+        $consulta = "UPDATE T02_Departamento SET T02_FechaBajaDepartamento=null WHERE T02_CodDepartamento=?";
+        $resultado = DBPDO::ejecutaConsulta($consulta, [$codigo]);
+
+        if ($resultado) {
+            $habilitado = true;
+        }
+        return $habilitado;
+    }
+    
+    public static function bajarDepartamento($codigo, $fechaBaja) {
+        $fecha = new DateTime($fechaBaja);
+        $deshabilitado = false;
+        $consulta = "UPDATE T02_Departamento SET T02_FechaBajaDepartamento=? WHERE T02_CodDepartamento=?";
+        $resultado = DBPDO::ejecutaConsulta($consulta, [$fecha->getTimestamp(), $codigo]);
+
+        if ($resultado) {
+            $deshabilitado = true;
+        }
+        return $deshabilitado;
+    }
+    
     public static function borrarDepartamento($codigo) {
         $borrado = false;
         $consulta = "DELETE FROM T02_Departamento WHERE T02_CodDepartamento=?";

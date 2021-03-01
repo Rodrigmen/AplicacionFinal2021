@@ -20,7 +20,9 @@ $controladores = [
     "mantenimiento" => "controller/cMtoDepartamentos.php",
     "altaDepartamento" => "controller/cAltaDepartamento.php",
     "modificarDepartamento" => "controller/cConsultarModificarDepartamento.php",
-    "eliminarDepartamento" => "controller/cEliminarDepartamento.php"
+    "eliminarDepartamento" => "controller/cEliminarDepartamento.php",
+    "bajaDepartamento" => "controller/cBajaDepartamento.php",
+    "altaLogicaDepartamento" => "controller/cAltaLogicaDepartamento.php"
 ];
 
 $vistas = [
@@ -35,6 +37,8 @@ $vistas = [
     "mantenimiento" => "view/vMtoDepartamentos.php",
     "altaDepartamento" => "view/vAltaDepartamento.php",
     "modificarDepartamento" => "view/vConsultarModificarDepartamento.php",
-    "eliminarDepartamento" => "view/vEliminarDepartamento.php"
+    "eliminarDepartamento" => "view/vEliminarDepartamento.php",
+    "bajaDepartamento" => "view/vBajaDepartamento.php",
+    "altaLogicaDepartamento" => "view/vAltaLogicaDepartamento.php"
 ];
 ?>
